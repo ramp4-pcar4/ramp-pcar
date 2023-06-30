@@ -10,6 +10,9 @@ body.image.alttag8,RAMP from the Climate Action Map site. Custom data icons are 
 body.image.alttag9,"Examples of maps on the Open Maps site are shown. These have a thumbnail, link and short description.",1,"Des exemples de cartes sur le site Cartes ouvertes sont présentés. Ces derniers comportent une vignette, un lien et une brève description.",1
 button.requestDemo,Request a Demo,1,Demander une démonstration,1
 button.viewDemo,View Demo,1,Voir la démonstration,1
+button.send,Send,1,Envoyer,1
+button.sent,Sent,1,Envoyée,0
+button.sending,Sending,1,Envoi en cours,0
 carousel.cam.description,"See how the Government of Canada is fighting climate change in communities across the country. On this interactive map, you can find information on investments on: Clean and renewable energy, energy efficiency in homes and businesses, Made-in-Canada clean technologies, electric vehicle charging stations and alternative fuel infrastructure, public transit, investments in Indigenous, rural and remote communities to transition to cleaner energy sources, and support for communities to adapt to a changing climate.",1,"Voyez comment le gouvernement du Canada lutte contre les changements climatiques dans les collectivités à l’échelle du pays. Sur cette carte interactive, vous pouvez trouver des renseignements sur les investissements dans : les énergies propres et renouvelables, l’efficacité énergétique dans les foyers et les entreprises, les technologies propres fabriquées au Canada, les stations de recharge de véhicules électriques et les infrastructures de carburants de remplacement, le transport en commun, les investissements dans les communautés autochtones, rurales et éloignées pour assurer la transition vers des sources d’énergie plus propres, et le soutien aux communautés pour s’adapter aux changements climatiques.",1
 carousel.cam.imageDesc,RAMP from the Climate Action Map site. Custom data icons are displayed on the map.,1,RAMP du site Carte d’action climatique. Des icônes de données personnalisées sont affichées sur la carte.,0
 carousel.cam.link,https://climate-change.canada.ca/climate-action-map/,1,https://changements-climatiques.canada.ca/carte-action-climatique/,1
@@ -31,8 +34,6 @@ carousel.storylines.imageDesc,"An image of a Pollution Prevention map, that show
 carousel.storylines.link,https://environmental-maps.canada.ca/RAMP-Storylines/index-ca-en.html#/en/f6f7baf4-cccb-4521-a037-b4691b0f0d49,1,https://cartes-environnementales.canada.ca/Scenarios-de-PCAR/index-ca-fr.html#/fr/f6f7baf4-cccb-4521-a037-b4691b0f0d49,1
 carousel.storylines.title,RAMP Storylines,1,Scenarios de PCAR,1
 carousel.title,Portfolio,1,Portefeuille,1
-email.body,Describe%20your%20business requirements%20to%20the%20RAMP%20development%20team.%20Someone%20will%20reach%20out%20to%20you%20soon%20to%20schedule%20a%20demonstration%20and%20discuss%20your%20needs!,1,Veuillez%20décrire%20vos%20besoins%20opérationnels%20à%20l’équipe%20de%20développement%20de%20la%20PCAR.%20Nous%20communiquerons%20avec%20vous%20pour%20organiser%20une%20démonstration%20et%20examiner%20vos%20besoins!,1
-email.subject,Request%20for%20a%20RAMP%20demo,1,Demander%20une%20démonstration%20de%20la%20PCAR,1
 explainer.main.accessible.description,"Fully compliant with WCAG ""AA"" criteria for accessibility, and several other Treasury Board Secretariat standards and directives.",1,Pleinement conforme aux critères d’accessibilité WCAG « AA » et à plusieurs autres normes et directives du Secrétariat du Conseil du Trésor.,1
 explainer.main.accessible.title,Accessible,1,Accessible,1
 explainer.main.customizable.description,"A wide selection of configuration options for functionality, visual appearance, and data presentation are available with ample documentation to support your data.",1,"Un vaste éventail d’options de configuration pour la fonctionnalité, l’apparence visuelle et la présentation des données est disponible; de nombreux documents appuient vos données.",1
@@ -101,3 +102,13 @@ sample.plugins.description,"In this example, Cadmium and Mercury Emissions data 
 feature.storyramp.description,"Use interactive maps and other multimedia to tell a story about your data or project. Showcase a compelling narrative in an attractive and easy to compile way, while adhering to Government of Canada and Treasury Board standards and guidelines for web content.	",1,"Utilisez des cartes interactives et d’autres supports multimédias pour raconter une histoire sur vos données ou votre projet. Présentez un récit convaincant d’une manière attrayante et facile à compiler, tout en respectant les normes et les lignes directrices du gouvernement du Canada et du Conseil du Trésor en matière de contenu Web.",1
 feature.storyramp.imageDesc,"A map displaying hundreds of Pulp & Paper facilities across Canada.",1,"[fr] A map displaying hundreds of Pulp & Paper facilities across Canada.",0
 feature.storyramp.title,Tell a Story with RAMP,1,Racontez une histoire au moyen de la PCAR,1
+contact.getInTouch,Get in Touch!,1,Communiquez avec nous!,1
+contact.name,Name,1,Nom,1
+contact.nameRequired,Name is required.,1,Le nom est requis.,0
+contact.email,Email,1,Courriel,1
+contact.emailRequired,Email is required.,1,Un e-mail est requis.,0
+contact.emailInvalid,Invalid email format.,1,Format d'email invalide.,0
+contact.details,Tell us about your project!,1,Parlez nous de votre projet!,0
+contact.detailsRequired,Details are required.,1,Des détails sont requis.,0
+contact.success,Successfully submitted!,1,Soumis avec succès!,0
+contact.error,An error has occurred. Please try again later.,1,Une erreur est survenue. Veuillez réessayer plus tard.,0
