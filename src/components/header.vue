@@ -54,13 +54,10 @@
                 <a class="button" href="https://github.com/fgpv-vpgf">
                     {{ $t('header.github') }}
                 </a>
-                <a
-                    class="button font-bold border-4 border-black"
-                    :href="`mailto:${links[$i18n.locale].email}?subject=${$t(
-                        'email.subject'
-                    )}&body=${$t('email.body')}`"
-                >
-                    {{ $t('header.getInTouch') }}
+                <a class="button font-bold border-4 border-black">
+                    <router-link to="/#footer">
+                        {{ $t('header.getInTouch') }}</router-link
+                    >
                 </a>
             </div>
         </div>

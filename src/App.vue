@@ -13,6 +13,7 @@ import RampHeaderV from '@/components/header.vue';
 import RampMapV from '@/components/map.vue';
 import InfoShellV from '@/components/info/shell.vue';
 import RampFooterV from '@/components/footer.vue';
+import useToast from 'vue-toastification';
 
 @Component({
     components: {
@@ -33,6 +34,7 @@ export default class App extends Vue {
         this.$router.replace({ query: { lang: this.$i18n.locale } });
         document.title = this.$i18n.t('page.title') as string;
         document.documentElement.lang = this.$i18n.locale;
+        Vue.use(useToast);
     }
 }
 </script>

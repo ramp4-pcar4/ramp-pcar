@@ -12,13 +12,15 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "axios": "^1.4.0",
     "core-js": "^3.6.5",
     "glider-js": "^1.7.7",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-i18n": "^8.24.5",
     "vue-property-decorator": "^9.1.2",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.6.5",
+    "vue-toastification": "^1.7.14"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",

@@ -53,13 +53,10 @@
                                 !no-underline
                                 text-xl
                             "
-                            :href="`mailto:${
-                                links[$i18n.locale].email
-                            }?subject=${$t('email.subject')}&body=${$t(
-                                'email.body'
-                            )}`"
                         >
-                            {{ $t('button.requestDemo') }}
+                            <router-link to="/#footer">
+                                {{ $t('button.requestDemo') }}</router-link
+                            >
                         </a>
                     </div>
                 </div>
