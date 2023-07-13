@@ -6,6 +6,16 @@ const CAROUSEL = 'carousel';
 
 export const layout = [
     {
+        type: MULTI,
+        key: 'improved',
+        sections: ['interface', 'developer', 'fast'],
+        subSections: {
+            interface: [],
+            developer: [],
+            fast: ['refactor', 'happy', 'speed']
+        }
+    },
+    {
         type: FEATURE,
         key: 'datatypes',
         index: '0'
@@ -51,10 +61,5 @@ export const layout = [
         type: CAROUSEL,
         keys: ['cccs', 'cesi', 'cam', 'openmaps', 'storylines'],
         index: [1, 2, 3, 4, 5]
-    },
-    {
-        type: MULTI,
-        key: 'upcoming',
-        sections: ['interface', 'developer', 'fast']
     }
 ];

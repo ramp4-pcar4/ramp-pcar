@@ -2,15 +2,65 @@
     <div class="section py-[150px]">
         <div class="container mx-auto flex items-center justify-center">
             <div class="text-center w-[80%] md:w-2/3">
+                <div class="flex justify-end">
+                    <nav class="font-bold h-6 mb-20" aria-label="Breadcrumb">
+                        <ul class="breadcrumb-list inline-flex">
+                            <li
+                                v-if="selectedSubSection"
+                                class="flex items-center"
+                            >
+                                <a
+                                    href="#"
+                                    @click="resetSelection"
+                                    class="hover:text-blue-400"
+                                    >{{ $t(`header.title`) + '4' }}</a
+                                >
+                                <span class="fill-current ml-4"> / </span>
+                            </li>
+                            <li
+                                v-if="selectedSubSection"
+                                class="flex items-center"
+                            >
+                                <span
+                                    class="text-gray-500"
+                                    aria-current="page"
+                                    >{{
+                                        $t(
+                                            `multi.${section.key}.${selectedSubSection}.title`
+                                        )
+                                    }}</span
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
                 <h2 class="!mt-0">
-                    {{ $t(`multi.${section.key}.title`) }}
+                    {{
+                        selectedSubSection
+                            ? $t(
+                                  `multi.${section.key}.${selectedSubSection}.title`
+                              )
+                            : $t(`multi.${section.key}.title`)
+                    }}
                 </h2>
-                <p>{{ $t(`multi.${section.key}.description`) }}</p>
-                <div class="md:flex">
+                <p v-if="!selectedSubSection">
+                    {{ $t(`multi.${section.key}.description`) }}
+                </p>
+                <p v-if="!selectedSubSection">
+                    {{ $t(`multi.${section.key}.subDescription`) }}
+                </p>
+                <p v-else-if="selectedSubSection">
+                    {{
+                        $t(
+                            `multi.${section.key}.${selectedSubSection}.subTitle`
+                        )
+                    }}
+                </p>
+                <div v-if="!selectedSubSection" class="md:flex">
                     <div
                         v-for="(subSection, subIndex) in section.sections"
                         :key="subSection + subIndex"
-                        class="flex-1 m-[20px] p-[20px]"
+                        class="flex-1 m-[20px] p-[20px] hover:bg-blue-200"
                         :class="
                             subIndex % 2 === 0
                                 ? 'bg-green'
@@ -18,6 +68,7 @@
                                 ? 'bg-teal'
                                 : 'bg-white'
                         "
+                        @click="selectSection(subSection)"
                     >
                         <h3>
                             {{ $t(`multi.${section.key}.${subSection}.title`) }}
@@ -36,6 +87,31 @@
                         </p>
                     </div>
                 </div>
+                <div v-if="selectedSubSection" class="md:flex">
+                    <div class="flex flex-col">
+                        <div class="md:flex">
+                            <div
+                                v-for="(subSection, subIndex) in section
+                                    .subSections[selectedSubSection]"
+                                :key="subSection + subIndex"
+                                class="p-10"
+                            >
+                                <img
+                                    :src="`./img/${subSection}.svg`"
+                                    class="h-[120px] !mb-0 inline-flex"
+                                    alt=""
+                                />
+                                <p>
+                                    {{
+                                        $t(
+                                            `multi.${section.key}.${selectedSubSection}.${subSection}`
+                                        )
+                                    }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -48,7 +124,35 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 export default class InfoMultiV extends Vue {
     @Prop() section!: any;
     @Prop() index!: number;
+    selectedSubSection: any = null;
+
+    selectSection(subSection: any) {
+        this.selectedSubSection = subSection;
+    }
+
+    resetSelection(event: Event) {
+        event.preventDefault();
+        this.selectedSubSection = null;
+    }
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped>
+.breadcrumb-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-list li {
+    margin-right: -20px;
+}
+
+.breadcrumb-list li::before {
+    content: none;
+}
+
+.section {
+    padding-top: 50px;
+}
+</style>
