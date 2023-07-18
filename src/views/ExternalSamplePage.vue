@@ -14,7 +14,11 @@
             ></description-block>
         </div>
         <component :is="`canada-${$i18n.locale}`">
-            <ramp-map :config="config"></ramp-map>
+            <ramp-map
+                :config="config"
+                :version="3"
+                :id="`ramp-map-${config}`"
+            ></ramp-map>
         </component>
     </div>
 </template>

@@ -20,6 +20,10 @@
                         mb-[60px]
                         mw-[325px]
                         md:w-auto
+                        prose prose-sm
+                        md:prose
+                        lg:prose-lg
+                        !max-w-none
                         flex-1 flex-basis-0
                     "
                     v-for="(key, index) in section.keys"

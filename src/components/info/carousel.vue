@@ -1,5 +1,14 @@
 <template>
-    <div class="section py-[150px]">
+    <div
+        class="
+            section
+            py-[150px]
+            prose prose-sm
+            md:prose
+            lg:prose-lg
+            !max-w-none
+        "
+    >
         <div class="flex max-w-none justify-center mb-[50px]">
             <h2 class="!mt-0">{{ $t('carousel.title') }}</h2>
         </div>
