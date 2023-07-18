@@ -101,3 +101,5 @@ sample.plugins.description,"In this example, Cadmium and Mercury Emissions data 
 feature.storyramp.description,"Use interactive maps and other multimedia to tell a story about your data or project. Showcase a compelling narrative in an attractive and easy to compile way, while adhering to Government of Canada and Treasury Board standards and guidelines for web content.	",1,"Utilisez des cartes interactives et d’autres supports multimédias pour raconter une histoire sur vos données ou votre projet. Présentez un récit convaincant d’une manière attrayante et facile à compiler, tout en respectant les normes et les lignes directrices du gouvernement du Canada et du Conseil du Trésor en matière de contenu Web.",1
 feature.storyramp.imageDesc,"A map displaying hundreds of Pulp & Paper facilities across Canada.",1,"[fr] A map displaying hundreds of Pulp & Paper facilities across Canada.",0
 feature.storyramp.title,Tell a Story with RAMP,1,Racontez une histoire au moyen de la PCAR,1
+toggle.ramp.three,RAMP 3,1,RAMP 3,1
+toggle.ramp.four,RAMP 4,1,RAMP 4,1

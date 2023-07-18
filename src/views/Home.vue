@@ -1,7 +1,13 @@
 <template>
-    <div class="home">
-        <ramp-map :shadow="true" :key="$i18n.locale"
-            ><div
+    <div>
+        <ramp-map
+            :shadow="true"
+            :key="$i18n.locale"
+            :version="3"
+            :id="`ramp-home`"
+            class="home"
+        >
+            <div
                 class="
                     flex
                     justify-center
