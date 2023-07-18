@@ -2,7 +2,7 @@
     <div class="section py-[125px]">
         <!-- py-[125px] -->
         <div class="container mx-auto flex items-center justify-center">
-            <div class="text-center w-[80%] md:w-2/3">
+            <div class="text-center !max-w-none w-[80%] md:w-2/3 prose prose-sm md:prose lg:prose-lg">
                 <!-- <div class="flex justify-end">
                     <nav class="font-bold h-6 mb-20" aria-label="Breadcrumb">
                         <ul class="breadcrumb-list inline-flex">

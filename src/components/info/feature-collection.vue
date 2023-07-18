@@ -3,7 +3,7 @@
         <div class="container mx-auto">
             <div class="text-center md:flex mx-auto gap-[80px] w-[80%] flex-wrap justify-center">
                 <div
-                    class="flex flex-col items-center mx-4 mb-[60px] mw-[325px] md:w-auto flex-1 flex-basis-0"
+                    class="flex flex-col items-center mx-4 mb-[60px] mw-[325px] md:w-auto prose prose-sm md:prose lg:prose-lg !max-w-none flex-1 flex-basis-0"
                     v-for="(key, index) in section.keys"
                     :key="key + index"
                 >
