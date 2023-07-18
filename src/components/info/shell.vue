@@ -1,9 +1,9 @@
 <template>
-    <div id="features" class="prose prose-sm md:prose lg:prose-lg !max-w-none">
+    <div id="features" class="!max-w-none">
         <component
             :is="mapping[section.type]"
             v-for="(section, index) in features"
-            :key="section.title + index"
+            :key="section.type + index"
             :section="section"
             :index="index"
             :class="{ 'bg-teal': index % 2 !== 0 }"
