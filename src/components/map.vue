@@ -10,15 +10,9 @@
                 z-10
                 pointer-events-none
             "
-            v-if="shadow"
+            v-if="shadowValue"
         ></div>
-        <div
-            id="ramp-map"
-            rv-plugins="swiper, draw"
-            is="rv-map"
-            class="h-[725px]"
-            v-pre
-        ></div>
+        <div id="ramp-map" is="rv-map" class="h-[725px]" v-pre></div>
         <div id="medium-text">
             <div id="text1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
@@ -63,17 +57,37 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 
 import MapScrollguard from './map-scrollguard.vue';
 
 @Component
 export default class RampMapV extends Vue {
     @Prop() config: string | undefined;
-    @Prop() shadow: boolean = false;
+    @Prop() shadow: boolean | undefined;
+    @Prop() height: string | undefined;
+    @Prop() id: string | undefined;
+    @Prop() version: number | undefined;
+
+    shadowValue = false;
 
     mounted() {
-        const RAMP = (window as any).RAMP;
+        this.shadowValue = this.shadow ?? false;
+
+        this.$el
+            .querySelector('#ramp-map')
+            ?.setAttribute('id', this.id ?? 'ramp-map');
+
+        const updatedID = this.id === undefined ? '#ramp-map' : '#' + this.id;
+
+        if (this.height) {
+            this.$el.querySelector(updatedID)?.classList.add(this.height);
+            this.$el.querySelector(updatedID)?.classList.remove('h-[725px]');
+        }
+
+        const RAMP =
+            this.version === 4 ? (window as any).RAMP4 : (window as any).RAMP;
+
         const _window = window as any;
 
         // if RAMP API is not ready yet, loop-wait until it's loaded
@@ -82,10 +96,17 @@ export default class RampMapV extends Vue {
             return;
         }
 
-        new RAMP.Map(
-            this.$el.querySelector('#ramp-map'),
-            `./config/${this.config ? this.config : '0'}.json`
-        );
+        if (this.version === 4) {
+            RAMP.createInstance(
+                this.$el.querySelector(updatedID),
+                require(`/public/config/ramp4/${this.config}.json`)
+            );
+        } else if (this.version === 3) {
+            new RAMP.Map(
+                this.$el.querySelector(updatedID),
+                `./config/ramp3/${this.config ? this.config : '0'}.json`
+            );
+        }
 
         _window.$('.flex.relative.z-10.shadow-lg.justify-center').css({
             display: 'flex'
@@ -93,6 +114,12 @@ export default class RampMapV extends Vue {
         _window.$('.text-white').css({
             display: 'block'
         });
+
+        if (this.config === 'plugins') {
+            this.$el
+                .querySelector(updatedID)
+                ?.setAttribute('rv-plugins', 'swiper, draw');
+        }
 
         if (this.config === 'sample_mobile') {
             new RAMP.Map(
@@ -143,14 +170,14 @@ export default class RampMapV extends Vue {
             _window.$('.text-white').css({
                 display: 'none'
             });
-            _window.$('#ramp-map').css({
+            _window.$(updatedID).css({
                 width: '50%',
                 'margin-left': '25%'
             });
         }
 
         window.scrollTo(0, 0);
-        if (this.$route.name === 'Home') {
+        if (this.version === 3 && this.$route.name === 'Home') {
             RAMP.mapAdded.subscribe(async (mapi: any) => {
                 const scrollguardComponent = new Vue({
                     render: (h) =>

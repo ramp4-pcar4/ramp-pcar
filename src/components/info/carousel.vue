@@ -1,12 +1,22 @@
 <template>
-    <div class="section py-[150px]">
+    <div
+        class="
+            section
+            py-[150px]
+            prose prose-sm
+            md:prose
+            lg:prose-lg
+            !max-w-none
+        "
+    >
         <div class="flex max-w-none justify-center mb-[50px]">
             <h2 class="!mt-0">{{ $t('carousel.title') }}</h2>
         </div>
         <div class="container mx-auto">
             <div class="glider-contain !w-[80%] !max-w-[800px]">
                 <div class="glider">
-                    <div v-for="num in [1, 2, 3, 4, 5]" :key="num">
+                    <!-- Temporarily remove Climate Action Map as it has broken basemap -->
+                    <div v-for="num in [1, 2, 3, 4]" :key="num">
                         <img
                             class="w-full"
                             :src="`./img/carousel-${

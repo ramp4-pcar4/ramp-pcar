@@ -1,6 +1,16 @@
 <template>
     <div class="section flex items-center justify-center py-[150px]">
-        <div class="text-center max-w-none w-[80%] md:w-2/3">
+        <div
+            class="
+                text-center
+                !max-w-none
+                w-[80%]
+                md:w-2/3
+                prose prose-sm
+                md:prose
+                lg:prose-lg
+            "
+        >
             <h2 class="!mt-0">
                 {{ $t(`explainer.${section.key}.title`) }}
             </h2>
