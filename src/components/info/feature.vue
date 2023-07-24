@@ -1,6 +1,12 @@
 <template>
-    <div class="section py-[150px]">
+    <div
+        class="section"
+        :class="section.key === 'storyramp' ? 'py-[50px]' : 'py-[150px]'"
+    >
         <div class="container mx-auto">
+            <div v-if="section.key === 'storyramp'">
+                <storylines></storylines>
+            </div>
             <div
                 class="
                     max-w-[80%]
@@ -13,6 +19,7 @@
                     md:flex-row
                 "
                 :class="index % 2 === 0 ? 'flex-col-reverse' : 'flex-col'"
+                v-else
             >
                 <div
                     class="image-container md:mr-[40px]"
@@ -65,13 +72,15 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import { links } from '@/configs/links';
 
 import DescriptionBlockV from './description-block.vue';
-import { links } from '@/configs/links';
+import StorylinesV from './storylines.vue';
 
 @Component({
     components: {
-        'description-block': DescriptionBlockV
+        'description-block': DescriptionBlockV,
+        storylines: StorylinesV
     }
 })
 export default class InfoFeatureV extends Vue {

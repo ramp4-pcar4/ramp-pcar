@@ -1,12 +1,19 @@
 module.exports = {
     mode: 'jit',
-    purge: ['./public/**/*.html', './src/**/*.vue'],
+    purge: [
+        './public/**/*.html',
+        './src/**/*.vue',
+        './node_modules/ramp-storylines/**/*.{vue,js,ts,jsx,tsx}'
+    ],
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
             boxShadow: {
                 'inset-bottom': 'inset 0px -6px 5px 0px rgba(0, 0, 0, 0.14)',
                 top: '0px -6px 5px 0px rgba(0, 0, 0, 0.14)'
+            },
+            flex: {
+                2: '2 2 0%'
             },
             colors: {
                 teal: 'rgba(241,249,255,1)',
@@ -31,9 +38,6 @@ module.exports = {
                         },
                         h3: {
                             color: '#000000'
-                        },
-                        a: {
-                            //color: '#000000'
                         }
                     }
                 },
