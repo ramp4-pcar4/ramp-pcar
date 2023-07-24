@@ -5,35 +5,11 @@
                 {{ $t('header.changeLang') }}
             </button></span
         >
-        <div
-            class="
-                !container
-                mx-auto
-                flex
-                justify-center
-                items-center
-                flex-wrap
-                gap-y-[8px]
-            "
-        >
+        <div class="!container mx-auto flex justify-center items-center flex-wrap gap-y-[8px]">
             <a href="" class="flex">
-                <img
-                    src="../assets/logo-no-text.svg"
-                    class="w-[100px] h-[100px] !m-0"
-                    alt="Logo for RAMP"
-                />
+                <img src="../assets/logo-no-text.svg" class="w-[100px] h-[100px] !m-0" alt="Logo for RAMP" />
                 <div class="flex flex-col justify-center text-black">
-                    <h1
-                        class="
-                            !my-0
-                            !font-semibold
-                            ml-[-3px]
-                            !text-[36px]
-                            !leading-[40px]
-                            border-0
-                            pb-0
-                        "
-                    >
+                    <h1 class="!my-0 !font-semibold ml-[-3px] !text-[36px] !leading-[40px] border-0 pb-0">
                         {{ $t('header.title') }}
                     </h1>
                     <p class="text-[20px] !my-0">
@@ -59,16 +35,10 @@
                     aria-label="GitHub"
                     role="button"
                 >
-                    <font-awesome-icon
-                        icon="fa-brands fa-github"
-                        style="color: #000000"
-                        class="w-12 h-12"
-                    />
+                    <font-awesome-icon icon="fa-brands fa-github" style="color: #000000" class="w-12 h-12" />
                 </a>
                 <a class="button font-bold border-4 border-black">
-                    <router-link :to="{ hash: '#footer' }">
-                        {{ $t('header.getInTouch') }}</router-link
-                    >
+                    <router-link :to="{ hash: '#footer' }"> {{ $t('header.getInTouch') }}</router-link>
                 </a>
             </div>
         </div>

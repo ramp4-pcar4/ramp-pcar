@@ -13,11 +13,9 @@ export default class MapScrollguard extends Vue {
 
     mounted(): void {
         // set a mouse-wheel listener to on the map node
-        this._mapi.mapDiv[0]
-            .querySelector('.rv-esri-map')!
-            .addEventListener('wheel', this.wheelHandler, {
-                capture: true
-            });
+        this._mapi.mapDiv[0].querySelector('.rv-esri-map')!.addEventListener('wheel', this.wheelHandler, {
+            capture: true
+        });
     }
 
     wheelHandler(event: WheelEvent): void {
@@ -41,10 +39,7 @@ export default class MapScrollguard extends Vue {
 
             // proper use of timeout
             // remove scroll guard notification after two seconds
-            window.setTimeout(
-                () => scrollGuardClassList.remove('guard-active'),
-                2000
-            );
+            window.setTimeout(() => scrollGuardClassList.remove('guard-active'), 2000);
         } else {
             scrollGuardClassList.remove('guard-active');
             scrollGuardClassList.add('guard-scrolling');

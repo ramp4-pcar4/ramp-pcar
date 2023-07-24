@@ -6,34 +6,14 @@
             </h2>
             <p>{{ $t(`explainer.${section.key}.description`) }}</p>
             <div class="flex flex-col">
-                <div
-                    class="md:flex"
-                    v-for="(row, index) in section.sections"
-                    :key="index"
-                >
-                    <div
-                        v-for="(subSection, index) in row"
-                        :key="subSection + index"
-                        class="flex-1 mx-[20px]"
-                    >
-                        <img
-                            :src="`./img/${subSection}.svg`"
-                            class="h-[120px] !mb-0 inline-flex"
-                            alt=""
-                        />
+                <div class="md:flex" v-for="(row, index) in section.sections" :key="index">
+                    <div v-for="(subSection, index) in row" :key="subSection + index" class="flex-1 mx-[20px]">
+                        <img :src="`./img/${subSection}.svg`" class="h-[120px] !mb-0 inline-flex" alt="" />
                         <h3>
-                            {{
-                                $t(
-                                    `explainer.${section.key}.${subSection}.title`
-                                )
-                            }}
+                            {{ $t(`explainer.${section.key}.${subSection}.title`) }}
                         </h3>
                         <p>
-                            {{
-                                $t(
-                                    `explainer.${section.key}.${subSection}.description`
-                                )
-                            }}
+                            {{ $t(`explainer.${section.key}.${subSection}.description`) }}
                         </p>
                     </div>
                 </div>

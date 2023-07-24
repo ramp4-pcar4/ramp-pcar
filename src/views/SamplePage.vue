@@ -11,11 +11,7 @@
                 :path="`sample.${config}.description`"
             ></description-block>
         </div>
-        <ramp-map
-            class="!container mx-auto mb-[60px]"
-            :config="config"
-            :key="$i18n.locale"
-        ></ramp-map>
+        <ramp-map class="!container mx-auto mb-[60px]" :config="config" :key="$i18n.locale"></ramp-map>
     </div>
 </template>
 

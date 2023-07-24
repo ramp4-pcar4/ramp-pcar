@@ -25,14 +25,8 @@
             <header>
                 <div id="wb-bnr" class="container">
                     <div class="row">
-                        <div
-                            class="brand col-xs-5 col-md-4"
-                            property="publisher"
-                            typeof="GovernmentOrganization"
-                        >
-                            <a
-                                href="https://www.canada.ca/en.html"
-                                property="url"
+                        <div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
+                            <a href="https://www.canada.ca/en.html" property="url"
                                 ><img
                                     src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_39/assets/sig-blk-en.svg"
                                     alt=""
@@ -40,16 +34,10 @@
                                 />
                                 <span class="wb-inv" property="name">
                                     Government of Canada /
-                                    <span lang="fr"
-                                        >Gouvernement du Canada</span
-                                    ></span
+                                    <span lang="fr">Gouvernement du Canada</span></span
                                 ></a
                             >
-                            <meta
-                                property="areaServed"
-                                typeOf="Country"
-                                content="Canada"
-                            />
+                            <meta property="areaServed" typeOf="Country" content="Canada" />
                             <link
                                 property="logo"
                                 href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_39/assets/wmms-blk.svg"
@@ -65,35 +53,13 @@
                                 class="form-inline"
                             >
                                 <div class="form-group">
-                                    <label for="wb-srch-q" class="wb-inv"
-                                        >Search Canada.ca</label
-                                    >
-                                    <input
-                                        name="cdn"
-                                        value="canada"
-                                        type="hidden"
-                                    />
+                                    <label for="wb-srch-q" class="wb-inv">Search Canada.ca</label>
+                                    <input name="cdn" value="canada" type="hidden" />
                                     <input name="st" value="s" type="hidden" />
-                                    <input
-                                        name="num"
-                                        value="10"
-                                        type="hidden"
-                                    />
-                                    <input
-                                        name="langs"
-                                        value="en"
-                                        type="hidden"
-                                    />
-                                    <input
-                                        name="st1rt"
-                                        value="1"
-                                        type="hidden"
-                                    />
-                                    <input
-                                        name="s5bm3ts21rch"
-                                        value="x"
-                                        type="hidden"
-                                    />
+                                    <input name="num" value="10" type="hidden" />
+                                    <input name="langs" value="en" type="hidden" />
+                                    <input name="st1rt" value="1" type="hidden" />
+                                    <input name="s5bm3ts21rch" value="x" type="hidden" />
                                     <input
                                         id="wb-srch-q"
                                         list="wb-srch-q-ac"
@@ -105,11 +71,7 @@
                                         maxlength="170"
                                         placeholder="Search Canada.ca"
                                     />
-                                    <input
-                                        type="hidden"
-                                        name="_charset_"
-                                        value="UTF-8"
-                                    />
+                                    <input type="hidden" name="_charset_" value="UTF-8" />
                                     <datalist id="wb-srch-q-ac">
                                         <!--[if lte IE 9]><select><![endif]-->
                                         <!--[if lte IE 9]></select><![endif]-->
@@ -122,9 +84,7 @@
                                         class="btn btn-primary btn-small"
                                         name="wb-srch-sub"
                                     >
-                                        <span
-                                            class="glyphicon-search glyphicon"
-                                        ></span
+                                        <span class="glyphicon-search glyphicon"></span
                                         ><span class="wb-inv">Search</span>
                                     </button>
                                 </div>
@@ -135,117 +95,75 @@
                 <nav class="gcweb-menu" typeof="SiteNavigationElement">
                     <div class="container">
                         <h2 class="wb-inv">Menu</h2>
-                        <button
-                            type="button"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                        >
+                        <button type="button" aria-haspopup="true" aria-expanded="false">
                             <span class="wb-inv">Main </span>Menu
-                            <span
-                                class="expicon glyphicon glyphicon-chevron-down"
-                            ></span>
+                            <span class="expicon glyphicon glyphicon-chevron-down"></span>
                         </button>
                         <ul role="menu" aria-orientation="vertical">
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/jobs.html"
+                                <a role="menuitem" href="https://www.canada.ca/en/services/jobs.html"
                                     >Jobs and the workplace</a
                                 >
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/immigration-citizenship.html"
+                                <a role="menuitem" href="https://www.canada.ca/en/services/immigration-citizenship.html"
                                     >Immigration and citizenship</a
                                 >
                             </li>
                             <li role="presentation">
-                                <a role="menuitem" href="https://travel.gc.ca/"
-                                    >Travel and tourism</a
-                                >
+                                <a role="menuitem" href="https://travel.gc.ca/">Travel and tourism</a>
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/business.html"
+                                <a role="menuitem" href="https://www.canada.ca/en/services/business.html"
                                     >Business and industry</a
                                 >
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/benefits.html"
-                                    >Benefits</a
-                                >
+                                <a role="menuitem" href="https://www.canada.ca/en/services/benefits.html">Benefits</a>
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/health.html"
-                                    >Health</a
-                                >
+                                <a role="menuitem" href="https://www.canada.ca/en/services/health.html">Health</a>
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/taxes.html"
-                                    >Taxes</a
-                                >
+                                <a role="menuitem" href="https://www.canada.ca/en/services/taxes.html">Taxes</a>
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/environment.html"
+                                <a role="menuitem" href="https://www.canada.ca/en/services/environment.html"
                                     >Environment and natural resources</a
                                 >
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/defence.html"
+                                <a role="menuitem" href="https://www.canada.ca/en/services/defence.html"
                                     >National security and defence</a
                                 >
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/culture.html"
+                                <a role="menuitem" href="https://www.canada.ca/en/services/culture.html"
                                     >Culture, history and sport</a
                                 >
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/policing.html"
+                                <a role="menuitem" href="https://www.canada.ca/en/services/policing.html"
                                     >Policing, justice and emergencies</a
                                 >
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/transport.html"
+                                <a role="menuitem" href="https://www.canada.ca/en/services/transport.html"
                                     >Transport and infrastructure</a
                                 >
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="http://international.gc.ca/world-monde/index.aspx?lang=eng"
+                                <a role="menuitem" href="http://international.gc.ca/world-monde/index.aspx?lang=eng"
                                     >Canada and the world</a
                                 >
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/finance.html"
+                                <a role="menuitem" href="https://www.canada.ca/en/services/finance.html"
                                     >Money and finances</a
                                 >
                             </li>
                             <li role="presentation">
-                                <a
-                                    role="menuitem"
-                                    href="https://www.canada.ca/en/services/science.html"
+                                <a role="menuitem" href="https://www.canada.ca/en/services/science.html"
                                     >Science and innovation</a
                                 >
                             </li>
@@ -258,9 +176,7 @@
                         <div class="row">
                             <ol class="breadcrumb">
                                 <li>
-                                    <a href="https://www.canada.ca/en.html"
-                                        >Canada.ca</a
-                                    >
+                                    <a href="https://www.canada.ca/en.html">Canada.ca</a>
                                 </li>
                             </ol>
                         </div>
@@ -288,36 +204,26 @@
                         <h2 class="wb-inv">About government</h2>
                         <ul class="list-unstyled colcount-sm-2 colcount-md-3">
                             <li>
-                                <a href="https://www.canada.ca/en/contact.html"
-                                    >Contact us</a
-                                >
+                                <a href="https://www.canada.ca/en/contact.html">Contact us</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://www.canada.ca/en/government/dept.html"
-                                    >Departments and agencies</a
-                                >
+                                <a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://www.canada.ca/en/government/publicservice.html"
+                                <a href="https://www.canada.ca/en/government/publicservice.html"
                                     >Public service and military</a
                                 >
                             </li>
                             <li>
-                                <a href="https://www.canada.ca/en/news.html"
-                                    >News</a
-                                >
+                                <a href="https://www.canada.ca/en/news.html">News</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://www.canada.ca/en/government/system/laws.html"
+                                <a href="https://www.canada.ca/en/government/system/laws.html"
                                     >Treaties, laws and regulations</a
                                 >
                             </li>
                             <li>
-                                <a
-                                    href="https://www.canada.ca/en/transparency/reporting.html"
+                                <a href="https://www.canada.ca/en/transparency/reporting.html"
                                     >Government-wide reporting</a
                                 >
                             </li>
@@ -325,15 +231,10 @@
                                 <a href="http://pm.gc.ca/eng">Prime Minister</a>
                             </li>
                             <li>
-                                <a
-                                    href="https://www.canada.ca/en/government/system.html"
-                                    >How government works</a
-                                >
+                                <a href="https://www.canada.ca/en/government/system.html">How government works</a>
                             </li>
                             <li>
-                                <a href="http://open.canada.ca/en/"
-                                    >Open government</a
-                                >
+                                <a href="http://open.canada.ca/en/">Open government</a>
                             </li>
                         </ul>
                     </nav>
@@ -345,34 +246,21 @@
                                 <h2 class="wb-inv">About this site</h2>
                                 <ul>
                                     <li>
-                                        <a
-                                            href="https://www.canada.ca/en/social.html"
-                                            >Social media</a
-                                        >
+                                        <a href="https://www.canada.ca/en/social.html">Social media</a>
                                     </li>
                                     <li>
-                                        <a
-                                            href="https://www.canada.ca/en/mobile.html"
-                                            >Mobile applications</a
-                                        >
+                                        <a href="https://www.canada.ca/en/mobile.html">Mobile applications</a>
                                     </li>
                                     <li>
-                                        <a
-                                            href="https://www.canada.ca/en/newsite.html"
-                                            >About Canada.ca</a
-                                        >
+                                        <a href="https://www.canada.ca/en/newsite.html">About Canada.ca</a>
                                     </li>
                                     <li>
-                                        <a
-                                            href="https://www.canada.ca/en/transparency/terms.html"
+                                        <a href="https://www.canada.ca/en/transparency/terms.html"
                                             >Terms and conditions</a
                                         >
                                     </li>
                                     <li>
-                                        <a
-                                            href="https://www.canada.ca/en/transparency/privacy.html"
-                                            >Privacy</a
-                                        >
+                                        <a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -382,10 +270,7 @@
                                     tabindex="0"
                                     @click="scrollTo('wb-cont')"
                                     @keypress.enter="scrollTo('wb-cont')"
-                                    >Top of Page
-                                    <span
-                                        class="glyphicon glyphicon-chevron-up"
-                                    ></span
+                                    >Top of Page <span class="glyphicon glyphicon-chevron-up"></span
                                 ></a>
                             </div>
                             <div class="col-xs-6 col-md-2 text-right">
@@ -393,11 +278,7 @@
                                     src="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_39/assets/wmms-blk.svg"
                                     alt="Symbol of the Government of Canada"
                                 />
-                                <meta
-                                    property="areaServed"
-                                    typeOf="Country"
-                                    content="Canada"
-                                />
+                                <meta property="areaServed" typeOf="Country" content="Canada" />
                                 <link
                                     property="logo"
                                     href="https://www.canada.ca/etc/designs/canada/cdts/gcweb/v4_0_39/assets/wmms-blk.svg"
