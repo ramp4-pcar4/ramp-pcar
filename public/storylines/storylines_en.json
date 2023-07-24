@@ -1,0 +1,125 @@
+{
+    "title": "Storylines Demo",
+    "introSlide": {
+        "logo": {
+            "src": "https://raw.githubusercontent.com/ramp4-pcar4/ramp4-pcar4/master/assets/logo.svg",
+            "altText": "Logo"
+        },
+        "title": "Storylines Demo",
+        "subtitle": "Where all your dreams come true."
+    },
+    "slides": [
+        {
+            "title": "Tell a Story with RAMP",
+            "panel": [
+                {
+                    "title": "Tell a Story with RAMP",
+                    "content": "Use interactive maps and other multimedia to tell a story about your data or project. Showcase a compelling narrative in an attractive and easy to compile way, while adhering to Government of Canada and Treasury Board standards and guidelines for web content.",
+                    "type": "text"
+                },
+                {
+                    "src": "storylines/assets/demo.png",
+                    "type": "image",
+                    "alt": "A map displaying hundreds of Pulp & Paper facilities across Canada.",
+                    "fullscreen": false
+                }
+            ]
+        },
+        {
+            "title": "Dynamic Panel",
+            "panel": [
+                {
+                    "title": "Dynamic Slide",
+                    "type": "dynamic",
+                    "content": "You can click on one of the following links to change the right panel.\n\n- <a panel='panel-1'>Text Panel</a>\n- <a panel='panel-2'>Image Panel</a>\n- <a panel='panel-3'>Charts Panel</a>\n- <a panel='panel-4'>Map Panel</a>\n- <a panel='panel-5'>Image slideshow</a>\n\n",
+                    "children": [
+                        {
+                            "id": "panel-1",
+                            "panel": {
+                                "title": "Dynamic Content",
+                                "content": "Text content residing in a dynamic panel.\n\n||Achievements|Ongoing Efforts and Planned Milestones|\n|-|-|-|\n|**Recovery**|*Dolphin and Union population*<p><ul><li>Initiated <a href='https://tc.canada.ca/en/marine-transportation/navigation-marine-conditions/proactive-vessel-management' target='_blank'>Transport Canada's Pro-active Vessel Management program</a> to mitigate shipping/ icebreaking impacts on sea ice crossings</li></ul></p>*Barren-ground population*<p><ul><li>On-the-ground actions for Northwest Territories, Nunavut and Yukon herds through management boards and Indigenous/territorial governments</li><li>On-the-ground partner-led projects, including Indigenous Protected and Conserved Areas initiatives relevant to barren-ground caribou</li></ul></p>|*Dolphin and Union population*<p><ul><li>Continue conservation planning to complete herd-specific plans</li><li>Continue engagement with Indigenous peoples on the Pan-Canadian Approach</li></ul></p>*Barren-ground population*<p><ul><li>Protection of freshwater crossings, access corridors, and calving/post-calving grounds in Nunavut</li></ul></p>|\n",
+                                "type": "text"
+                            }
+                        },
+                        {
+                            "id": "panel-2",
+                            "panel": {
+                                "src": "storylines/assets/GettyImages-187242601__1554821467033__w1920.jpg",
+                                "type": "image",
+                                "fullscreen": false
+                            }
+                        },
+                        {
+                            "id": "panel-3",
+                            "panel": {
+                                "type": "chart",
+                                "charts": [
+                                    {
+                                        "src": "storylines/charts/chartConfig_EN.json"
+                                    },
+                                    {
+                                        "src": "storylines/charts/hybridChartConfig_EN.json"
+                                    },
+                                    {
+                                        "src": "storylines/charts/csvUrlChart_EN.json"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "panel-4",
+                            "panel": {
+                                "config": "storylines/ramp-config/OilSandsFacilityLocations2019.json",
+                                "type": "map",
+                                "scrollguard": true
+                            }
+                        },
+                        {
+                            "id": "panel-5",
+                            "panel": {
+                                "images": [
+                                    {
+                                        "src": "storylines/assets/substances/1_AuroraNorth_RelDisp_EN.PNG",
+                                        "type": "image",
+                                        "fullscreen": false
+                                    },
+                                    {
+                                        "src": "storylines/assets/substances/2_FortHills_RelDisp_EN.PNG",
+                                        "type": "image",
+                                        "fullscreen": false
+                                    },
+                                    {
+                                        "src": "storylines/assets/substances/3_Horizon_RelDisp_EN.PNG",
+                                        "type": "image",
+                                        "fullscreen": false
+                                    }
+                                ],
+                                "loop": true,
+                                "caption": "NPRI substances reported for oil sands mining facilities",
+                                "type": "slideshow",
+                                "fullscreen": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Trends in mine tailings",
+            "panel": [
+                {
+                    "title": "Trends in mine tailings reported from surface mining facilities",
+                    "content": "Total reported tailings from oil sands surface mining facilities have increased by 56% between 2010 and 2019, an increase of 24,517 tonnes. Five of these facilities have been in production and have reported to the NPRI since before 2010. Of these facilities, four reported increases in their total tailings disposals between 2018 and 2019 and three reported decreases.",
+                    "type": "text"
+                },
+                {
+                    "title": "RAMP Sample",
+                    "config": "storylines/ramp-config/TailingsfromMiningFacilities2010to2019(timeslider).json",
+                    "type": "map"
+                }
+            ]
+        }
+    ],
+    "lang": "en",
+    "dateModified": "2023-07-24"
+}
