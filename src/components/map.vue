@@ -1,59 +1,34 @@
 <template>
     <div>
         <div
-            class="
-                shadow-inset-bottom
-                min-h-[20px]
-                absolute
-                mt-[705px]
-                w-full
-                z-10
-                pointer-events-none
-            "
+            class="shadow-inset-bottom min-h-[20px] absolute mt-[705px] w-full z-10 pointer-events-none"
             v-if="shadow"
         ></div>
-        <div
-            id="ramp-map"
-            rv-plugins="swiper, draw"
-            is="rv-map"
-            class="h-[725px]"
-            v-pre
-        ></div>
+        <div id="ramp-map" rv-plugins="swiper, draw" is="rv-map" class="h-[725px]" v-pre></div>
         <div id="medium-text">
             <div id="text1">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-                vitae tortor at mi vestibulum tincidunt gravida eget nisi. Ut id
-                finibus diam. Nullam vel leo sit amet neque fermentum venenatis.
-                Morbi volutpat elit eget turpis suscipit ornare. Vivamus
-                ultrices porta molestie. Donec eu lorem eleifend, laoreet augue
-                id, lacinia orci. Ut vitae iaculis massa. Fusce vitae turpis
-                diam. Suspendisse tempus suscipit sagittis. Aenean iaculis
-                maximus nulla, eget luctus mauris tincidunt sit amet. In feugiat
-                ex est, ac ultrices arcu pharetra at. Sed justo lacus, lacinia
-                nec ex eget, semper ultrices enim. Nullam blandit convallis
-                lectus, quis dictum lectus maximus eget. Maecenas ex dolor,
-                dictum a faucibus vitae, sollicitudin sit amet augue. Aenean
-                sollicitudin turpis in accumsan condimentum. Quisque lobortis
-                odio a orci pulvinar, dictum consequat erat tincidunt. Mauris
-                sem magna, ornare lobortis laoreet in, sollicitudin ac est.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae tortor at mi vestibulum tincidunt
+                gravida eget nisi. Ut id finibus diam. Nullam vel leo sit amet neque fermentum venenatis. Morbi volutpat
+                elit eget turpis suscipit ornare. Vivamus ultrices porta molestie. Donec eu lorem eleifend, laoreet
+                augue id, lacinia orci. Ut vitae iaculis massa. Fusce vitae turpis diam. Suspendisse tempus suscipit
+                sagittis. Aenean iaculis maximus nulla, eget luctus mauris tincidunt sit amet. In feugiat ex est, ac
+                ultrices arcu pharetra at. Sed justo lacus, lacinia nec ex eget, semper ultrices enim. Nullam blandit
+                convallis lectus, quis dictum lectus maximus eget. Maecenas ex dolor, dictum a faucibus vitae,
+                sollicitudin sit amet augue. Aenean sollicitudin turpis in accumsan condimentum. Quisque lobortis odio a
+                orci pulvinar, dictum consequat erat tincidunt. Mauris sem magna, ornare lobortis laoreet in,
+                sollicitudin ac est.
             </div>
             <div id="text2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                tempus imperdiet urna, sit amet iaculis lorem tristique ut.
-                Donec semper tortor est, id facilisis enim aliquam in. Sed id
-                risus sit amet neque vehicula maximus. Cras et rhoncus nulla, et
-                finibus mi. Donec sit amet luctus sapien, vitae ullamcorper
-                purus. Proin eleifend facilisis aliquet. Maecenas lectus nulla,
-                varius quis nibh ac, fringilla tempor elit. Duis fringilla
-                varius est a malesuada. Sed aliquet cursus nibh, sed lacinia
-                risus varius ac. Fusce ut lectus eget odio volutpat imperdiet et
-                ut mauris. Suspendisse sit amet consectetur neque. Donec blandit
-                molestie gravida. Praesent semper velit id lobortis tincidunt.
-                Mauris tempus ipsum sit amet ex semper, posuere porta tellus
-                aliquam. Aenean porta nunc in tortor dignissim, vel facilisis
-                lacus egestas. Phasellus suscipit nisl ac est hendrerit egestas.
-                Sed laoreet ultrices viverra. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus imperdiet urna, sit amet iaculis
+                lorem tristique ut. Donec semper tortor est, id facilisis enim aliquam in. Sed id risus sit amet neque
+                vehicula maximus. Cras et rhoncus nulla, et finibus mi. Donec sit amet luctus sapien, vitae ullamcorper
+                purus. Proin eleifend facilisis aliquet. Maecenas lectus nulla, varius quis nibh ac, fringilla tempor
+                elit. Duis fringilla varius est a malesuada. Sed aliquet cursus nibh, sed lacinia risus varius ac. Fusce
+                ut lectus eget odio volutpat imperdiet et ut mauris. Suspendisse sit amet consectetur neque. Donec
+                blandit molestie gravida. Praesent semper velit id lobortis tincidunt. Mauris tempus ipsum sit amet ex
+                semper, posuere porta tellus aliquam. Aenean porta nunc in tortor dignissim, vel facilisis lacus
+                egestas. Phasellus suscipit nisl ac est hendrerit egestas. Sed laoreet ultrices viverra. Lorem ipsum
+                dolor sit amet, consectetur adipiscing elit.
             </div>
             <div id="ramp-map2" is="rv-map" class="h-[725px]" v-pre></div>
         </div>
@@ -82,10 +57,7 @@ export default class RampMapV extends Vue {
             return;
         }
 
-        new RAMP.Map(
-            this.$el.querySelector('#ramp-map'),
-            `./config/${this.config ? this.config : '0'}.json`
-        );
+        new RAMP.Map(this.$el.querySelector('#ramp-map'), `./config/${this.config ? this.config : '0'}.json`);
 
         _window.$('.flex.relative.z-10.shadow-lg.justify-center').css({
             display: 'flex'
@@ -95,14 +67,8 @@ export default class RampMapV extends Vue {
         });
 
         if (this.config === 'sample_mobile') {
-            new RAMP.Map(
-                this.$el.querySelector('#ramp-map2'),
-                `./config/sample_mobile_medium.json`
-            );
-            new RAMP.Map(
-                this.$el.querySelector('#ramp-map3'),
-                `./config/sample_mobile_small.json`
-            );
+            new RAMP.Map(this.$el.querySelector('#ramp-map2'), `./config/sample_mobile_medium.json`);
+            new RAMP.Map(this.$el.querySelector('#ramp-map3'), `./config/sample_mobile_small.json`);
 
             _window.$('#medium-text').css({
                 display: 'block',
@@ -169,10 +135,7 @@ export default class RampMapV extends Vue {
                 // insert the scrollguard as the first child of the inner shell
                 // this will place the guard above the map, but below all other RAMP controls
                 // when the guard is active, it grays out the map, but not the controls
-                innerShell.insertBefore(
-                    scrollguardComponent.$el,
-                    innerShell.firstChild
-                );
+                innerShell.insertBefore(scrollguardComponent.$el, innerShell.firstChild);
             });
         }
     }

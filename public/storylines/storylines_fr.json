@@ -1,0 +1,123 @@
+{
+    "title": "Démo de Scénarios",
+    "introSlide": {
+        "logo": {
+            "src": "https://raw.githubusercontent.com/ramp4-pcar4/ramp4-pcar4/master/assets/logo.svg",
+            "altText": "Logo"
+        },
+        "title": "Démo de Scénarios",
+        "subtitle": "Où tous tes rêves deviennent réalité."
+    },
+    "slides": [
+        {
+            "title": "Racontez une histoire au moyen de la PCAR",
+            "panel": [
+                {
+                    "title": "Racontez une histoire au moyen de la PCAR",
+                    "content": "Utilisez des cartes interactives et d’autres supports multimédias pour raconter une histoire sur vos données ou votre projet. Présentez un récit convaincant d’une manière attrayante et facile à compiler, tout en respectant les normes et les lignes directrices du gouvernement du Canada et du Conseil du Trésor en matière de contenu Web.",
+                    "type": "text"
+                },
+                {
+                    "src": "storylines/assets/demo.png",
+                    "type": "image",
+                    "alt": "Une carte montrant des centaines d'installations de pâtes et papiers à travers le Canada.",
+                    "fullscreen": false
+                }
+            ]
+        },
+        {
+            "title": "Panneau Dynamique",
+            "panel": [
+                {
+                    "title": "Diapositive Dynamique",
+                    "type": "dynamic",
+                    "content": "Vous pouvez cliquer sur l'un des liens suivants pour changer le panneau de droite.\n\n- <a panel='panel-1'>Panneau de Texte</a>\n- <a panel='panel-2'>Panneau D'images</a>\n- <a panel='panel-3'>Panneau des Graphiques</a>\n- <a panel='panel-4'>Panneau de la Carte</a>\n- <a panel='panel-5'>Diaporama D'images</a>\n\n",
+                    "children": [
+                        {
+                            "id": "panel-1",
+                            "panel": {
+                                "title": "Contenu Dynamique",
+                                "content": "Contenu textuel résidant dans un panneau dynamique.\n\n||Réalisations|Efforts en Cours et Jalons Prévus|\n|-|-|-|\n|**Rétablissement**|*Population de Dolphin-et-Union*<p><ul><li>Lancement<a href='https://tc.canada.ca/fr/transport-maritime/navigation-conditions-maritimes/gestion-proactive-navires' target='_blank'> du programme Gestion proactive des navires de Transports Canada</a> pour atténuer l'impact des navires et des brise glace sur les passages de glace de mer</li></ul></p>*Population de la toundra*<p><ul><li>Mesures sur le terrain visant les hardes des Territoires du Nord Ouest, du Nunavut et du Yukon par l'intermédiaire de conseils de gestion et des gouvernements autochtones/territoriaux</li><li>Projets menés par des partenaires sur le terrain, y compris les initiatives relatives aux aires protégées et de conservation autochtones qui concernent le caribou de la toundra.</li></ul></p>|*Population de Dolphin-et-Union*<p><ul><li>Poursuite de la planification de la conservation pour exécuter les plans concernant certaines hardes en particulier</li><li>Poursuite de la mobilisation des peuples autochtones en ce qui concerne l'Approche pancanadienne</li></ul></p>*Population de la toundra*<p><ul><li>Protection des passages en eau douce, des couloirs d'accès et des aires de mise bas et d'élevage au Nunavut</li></ul></p>|\n",
+                                "type": "text"
+                            }
+                        },
+                        {
+                            "id": "panel-2",
+                            "panel": {
+                                "src": "storylines/assets/GettyImages-187242601__1554821467033__w1920.jpg",
+                                "type": "image",
+                                "fullscreen": false
+                            }
+                        },
+                        {
+                            "id": "panel-3",
+                            "panel": {
+                                "type": "chart",
+                                "charts": [
+                                    {
+                                        "src": "storylines/charts/chartConfig_FR.json"
+                                    },
+                                    {
+                                        "src": "storylines/charts/hybridChartConfig_FR.json"
+                                    },
+                                    {
+                                        "src": "storylines/charts/csvUrlChart_FR.json"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "panel-4",
+                            "panel": {
+                                "config": "storylines/ramp-config/OilSandsFacilityLocations2019.json",
+                                "type": "map",
+                                "scrollguard": true
+                            }
+                        },
+                        {
+                            "id": "panel-5",
+                            "panel": {
+                                "images": [
+                                    {
+                                        "src": "storylines/assets/substances/AuroraNorth_RelDisp_FR.PNG",
+                                        "type": "image",
+                                        "fullscreen": false
+                                    },
+                                    {
+                                        "src": "storylines/assets/substances/FortHills_RelDisp_FR.PNG",
+                                        "type": "image",
+                                        "fullscreen": false
+                                    },
+                                    {
+                                        "src": "storylines/assets/substances/Horizon_RelDisp_FR.PNG",
+                                        "type": "image",
+                                        "fullscreen": false
+                                    }
+                                ],
+                                "loop": true,
+                                "caption": "Résidus miniers déclarés à l’INRP par les installations d’exploitation minière à ciel ouvert de sables bitumineux",
+                                "type": "slideshow"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Tendances dans les résidus miniers déclarés par les installations d’exploitation minière à ciel ouvert",
+            "panel": [
+                {
+                    "title": "Tendances dans les résidus miniers déclarés par les installations d’exploitation minière à ciel ouvert",
+                    "content": "Le total des résidus déclarés par les installations d’exploitation minière à ciel ouvert des sables bitumineux a augmenté de 56% entre 2010 et 2019, soit une augmentation de 24 517 tonnes. Cinq de ces installations mènent des activités d’exploitation et produisent des déclarations à l’INRP depuis avant 2010. Quatre de ces installations ont augmenté leur quantité de résidus miniers déclarée entre 2018 et 2019, alors que les trois autres ont déclaré l’avoir diminué durant cette période.",
+                    "type": "text"
+                },
+                {
+                    "config": "storylines/ramp-config/TailingsfromMiningFacilities2010to2019(timeslider).json",
+                    "type": "map"
+                }
+            ]
+        }
+    ],
+    "lang": "fr",
+    "dateModified": "2023-07-24"
+}
