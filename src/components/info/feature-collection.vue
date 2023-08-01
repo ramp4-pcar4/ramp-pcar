@@ -25,13 +25,15 @@
                     v-for="(key, index) in section.keys"
                     :key="key + index"
                 >
-                    <h2 class="!mt-0 md:h-[60px] lg:h-[80px] xl:h-[60px]">
-                        {{ $t(`feature.${key}.title`) }}
-                    </h2>
-                    <description-block
-                        class="!mb-[36px] flex-1"
-                        :path="`feature.${key}.description`"
-                    ></description-block>
+                    <div class="flex flex-col space-y-10">
+                        <h2 class="!mt-0 md:h-[60px] lg:h-[80px] xl:h-[60px]">
+                            {{ $t(`feature.${key}.title`) }}
+                        </h2>
+                        <description-block
+                            class="!mb-[36px] flex-1"
+                            :path="`feature.${key}.description`"
+                        ></description-block>
+                    </div>
                     <a
                         class="
                             bg-teal
