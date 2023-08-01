@@ -39,5 +39,5 @@ jobs:
                         repo: context.repo.repo,
                         body: `Your demo site is ready! 🚀
 
-                        Main: https://${{github.repository_owner}}.github.io/ramp4-website/${{github.head_ref}}/`
+                        Main: https://${{github.repository_owner}}.github.io/ramp-website/${{github.head_ref}}/`
                       })
