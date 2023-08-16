@@ -16,7 +16,7 @@
                 :id="`ramp-maps-${index}`"
             >
                 <div
-                    class="image-container md:mr-[40px]"
+                    class="image-container md:mr-[20px]"
                     v-if="index % 2 !== 0"
                 >
                     <div v-if="index != 5">
@@ -63,7 +63,7 @@
                     />
                 </div>
                 <div
-                    class="flex-1 prose prose-sm md:prose lg:prose-lg"
+                    class="flex-1 px-[20px] prose prose-sm md:prose lg:prose-lg"
                     :class="{ 'text-right': index % 2 !== 0 }"
                 >
                     <h2>
@@ -92,7 +92,7 @@
                     </a>
                 </div>
                 <div
-                    class="image-container md:ml-[40px]"
+                    class="image-container md:ml-[20px]"
                     v-if="index % 2 === 0"
                 >
                     <toggle-version

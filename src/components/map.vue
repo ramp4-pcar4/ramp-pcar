@@ -72,7 +72,7 @@ export default class RampMapV extends Vue {
     shadowValue = false;
 
     mounted() {
-        this.shadowValue = this.shadow === undefined ? false : this.shadow;
+        this.shadowValue = this.shadow ?? false;
 
         this.$el
             .querySelector('#ramp-map')
