@@ -9,46 +9,17 @@
                     <div v-for="num in [1, 2, 3, 4, 5]" :key="num">
                         <img
                             class="w-full"
-                            :src="`./img/carousel-${
-                                section.index[num - 1]
-                            }.png`"
-                            :alt="
-                                $t(
-                                    `carousel.${
-                                        section.keys[num - 1]
-                                    }.imageDesc`
-                                )
-                            "
+                            :src="`./img/carousel-${section.index[num - 1]}.png`"
+                            :alt="$t(`carousel.${section.keys[num - 1]}.imageDesc`)"
                         />
                         <div class="max-w-none my-[20px]">
                             <h3>
-                                <a
-                                    :href="
-                                        $t(
-                                            `carousel.${
-                                                section.keys[num - 1]
-                                            }.link`
-                                        )
-                                    "
-                                    target="_blank"
-                                >
-                                    {{
-                                        $t(
-                                            `carousel.${
-                                                section.keys[num - 1]
-                                            }.title`
-                                        )
-                                    }}
+                                <a :href="$t(`carousel.${section.keys[num - 1]}.link`)" target="_blank">
+                                    {{ $t(`carousel.${section.keys[num - 1]}.title`) }}
                                 </a>
                             </h3>
                             <p>
-                                {{
-                                    $t(
-                                        `carousel.${
-                                            section.keys[num - 1]
-                                        }.description`
-                                    )
-                                }}
+                                {{ $t(`carousel.${section.keys[num - 1]}.description`) }}
                             </p>
                         </div>
                     </div>

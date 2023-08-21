@@ -65,29 +65,15 @@
                         v-for="(subSection, subIndex) in section.sections"
                         :key="subSection + subIndex"
                         class="flex-1 m-[20px] p-[20px]"
-                        :class="
-                            subIndex % 2 === 0
-                                ? 'bg-green'
-                                : index % 2 === 0
-                                ? 'bg-teal'
-                                : 'bg-white'
-                        "
+                        :class="subIndex % 2 === 0 ? 'bg-green' : index % 2 === 0 ? 'bg-teal' : 'bg-white'"
                     >
                         <!-- @click="selectSection(subSection)"  hover:bg-blue-200" -->
                         <h3>
                             {{ $t(`multi.${section.key}.${subSection}.title`) }}
                         </h3>
-                        <img
-                            :src="`./img/${subSection}.svg`"
-                            alt=""
-                            class="!mb-0 h-[200px] inline-flex py-[40px]"
-                        />
+                        <img :src="`./img/${subSection}.svg`" alt="" class="!mb-0 h-[200px] inline-flex py-[40px]" />
                         <p class="!mb-[32px]">
-                            {{
-                                $t(
-                                    `multi.${section.key}.${subSection}.description`
-                                )
-                            }}
+                            {{ $t(`multi.${section.key}.${subSection}.description`) }}
                         </p>
                     </div>
                 </div>
