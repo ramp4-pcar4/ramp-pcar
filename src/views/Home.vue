@@ -1,7 +1,7 @@
 <template>
-    <div class="home">
-        <ramp-map :shadow="true" :key="$i18n.locale"
-            ><div class="flex justify-center w-full container mx-auto absolute top-[214px] pointer-events-none">
+    <div>
+        <ramp-map :shadow="true" :key="$i18n.locale" :version="3" :id="`ramp-home`" class="home">
+            <div class="flex justify-center w-full container mx-auto absolute top-[214px] pointer-events-none">
                 <div class="flex justify-end w-full md:w-2/3">
                     <div
                         class="backdrop-blur bg-black-transparent h-[450px] w-full md:w-[700px] p-[40px] !text-white text-right flex-col flex items-end justify-center pointer-events-auto prose !prose-white prose-sm md:prose lg:prose-lg !max-w-none"
@@ -44,12 +44,12 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .home {
-    ::v-deep #ramp-map rv-appbar {
+    rv-appbar {
         @apply hidden #{!important};
     }
-    ::v-deep #ramp-map .rv-content-pane {
+    .rv-content-pane {
         @apply hidden #{!important};
     }
 }
