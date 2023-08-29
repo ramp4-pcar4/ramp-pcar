@@ -127,11 +127,15 @@ export default class InfoFeatureV extends Vue {
     }
 
     beforeUpdate() {
-        this.previousScrollPosition = window.scrollY;
+        if (this.isVisible) {
+            this.previousScrollPosition = window.scrollY;
+        }
     }
 
     updated() {
-        window.scrollTo(0, this.previousScrollPosition);
+        if (this.isVisible) {
+            window.scrollTo(0, this.previousScrollPosition);
+        }
     }
 
     mounted() {
