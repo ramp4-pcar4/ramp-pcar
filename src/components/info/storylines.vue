@@ -1,5 +1,5 @@
 <template>
-    <div class="storylines bg-white" v-if="loaded && config !== undefined">
+    <div class="storylines bg-white border-2 border-black" v-if="loaded && config !== undefined">
         <header class="gray-200 sticky top-0 h-16 leading-9 w-full z-50 border-b border-gray-500 bg-gray-200">
             <div class="flex w-full sm:px-6 py-3 mx-auto">
                 <storylines-mobile-toc

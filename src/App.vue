@@ -26,6 +26,8 @@ export default class App extends Vue {
     beforeMount() {
         if (this.$router.currentRoute.query['lang']) {
             this.$i18n.locale = this.$router.currentRoute.query['lang'] as string;
+        } else {
+            this.$router.replace({ query: { lang: this.$i18n.locale } });
         }
         document.title = this.$i18n.t('page.title') as string;
         document.documentElement.lang = this.$i18n.locale;

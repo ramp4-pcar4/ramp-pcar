@@ -18,9 +18,9 @@
                     "type": "text"
                 },
                 {
-                    "src": "storylines/assets/demo.png",
+                    "src": "storylines/assets/RAMP2.png",
                     "type": "image",
-                    "alt": "Une carte montrant des centaines d'installations de pâtes et papiers à travers le Canada.",
+                    "altText": "Une carte montrant des centaines d'installations de pâtes et papiers à travers le Canada.",
                     "fullscreen": false
                 }
             ]
@@ -79,24 +79,30 @@
                             "panel": {
                                 "images": [
                                     {
-                                        "src": "storylines/assets/substances/AuroraNorth_RelDisp_FR.PNG",
+                                        "src": "storylines/assets/heron.jpg",
                                         "type": "image",
+                                        "altText": "Un Grand Héron prend son envol le long du littoral de la rivière Nicomekl River. Source : Tim Fitzgerald, Canards Illimités Canada",
+                                        "caption": "Un Grand Héron prend son envol le long du littoral de la rivière Nicomekl River. Source : Tim Fitzgerald, Canards Illimités Canada",
                                         "fullscreen": false
                                     },
                                     {
-                                        "src": "storylines/assets/substances/FortHills_RelDisp_FR.PNG",
+                                        "src": "storylines/assets/bittern.jpg",
                                         "type": "image",
+                                        "altText": "Le Petit Blongios (Ixobrychus exilis) (ici une femelle) est une espèce menacée au Canada. Ce petit héron niche dans les grands marais à quenouilles toujours présents dans les Basses-terres du Saint-Laurent. Source : Benoît Jobin",
+                                        "caption": "Le Petit Blongios (Ixobrychus exilis) (ici une femelle) est une espèce menacée au Canada. Ce petit héron niche dans les grands marais à quenouilles toujours présents dans les Basses-terres du Saint-Laurent. Source : Benoît Jobin",
                                         "fullscreen": false
                                     },
                                     {
-                                        "src": "storylines/assets/substances/Horizon_RelDisp_FR.PNG",
+                                        "src": "storylines/assets/plover.jpg",
                                         "type": "image",
+                                        "altText": "Le Pluvier montagnard est une espèce d’oiseau migrateur en péril. Source : Cliff Wallis",
+                                        "caption": "Le Pluvier montagnard est une espèce d’oiseau migrateur en péril. Source : Cliff Wallis",
                                         "fullscreen": false
                                     }
                                 ],
                                 "loop": true,
-                                "caption": "Résidus miniers déclarés à l’INRP par les installations d’exploitation minière à ciel ouvert de sables bitumineux",
-                                "type": "slideshow"
+                                "type": "slideshow",
+                                "fullscreen": false
                             }
                         }
                     ]
