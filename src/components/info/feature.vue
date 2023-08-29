@@ -139,11 +139,15 @@ export default class InfoFeatureV extends Vue {
             this.show = true;
         }, 1500);
 
+        let timeoutID = 0;
         const callback = (entries: any) => {
             const [entry] = entries;
             if (entry.isIntersecting) {
-                this.isVisible = true;
+                timeoutID = setTimeout(() => {
+                    this.isVisible = true;
+                }, 500);
             } else {
+                clearTimeout(timeoutID);
                 this.isVisible = false;
                 this.version = 4;
             }
