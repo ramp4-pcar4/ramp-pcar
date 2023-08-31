@@ -15,9 +15,9 @@
         "legend": {
             "allowImport": false,
             "isOpen": {
-                "large": true,
-                "medium": true,
-                "small": true
+                "large": false,
+                "medium": false,
+                "small": false
             }
         }
     },
@@ -100,10 +100,10 @@
             {
                 "id": "EXT_NRCAN_Lambert_3978",
                 "default": {
-                    "xmax": 5962497.306959615,
-                    "xmin": -9142595.403225806,
-                    "ymax": 4779977.211201423,
-                    "ymin": -974721.7981965962
+                    "xmin": -2157378.42,
+                    "xmax": 1533566.46,
+                    "ymin": -933701.21,
+                    "ymax": 3828808.32
                 },
                 "spatialReference": {
                     "wkid": 3978
