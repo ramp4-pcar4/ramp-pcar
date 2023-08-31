@@ -10,33 +10,38 @@
                 :id="`ramp-maps-${index}`"
                 v-else
             >
-                <div class="image-container md:mr-[20px]" v-if="index % 2 !== 0">
+                <div class="map-container md:mr-[20px]" v-if="index % 2 !== 0">
                     <toggle-version @ramp3="openRAMP3" @ramp4="openRAMP4" :version="version" :key="version" />
-                    <div class="rv-loading-screen" :class="{ 'rv-loaded': isVisible }">
-                        <div class="rv-loading-section rv-left"></div>
-                        <div class="rv-loading-section rv-right"></div>
-                    </div>
-                    <keep-alive>
-                        <ramp-map
-                            v-if="version === 4 && isVisible"
-                            :config="section.key"
-                            height="h-[600px]"
-                            :id="`ramp-map4-${index}`"
-                            :version="4"
-                            :key="`ramp-map4-${index}`"
-                        />
-                    </keep-alive>
-                    <div v-if="isVisible">
+                    <div :class="{ 'flex justify-center': index === 5 }">
+                        <div
+                            class="rv-loading-screen"
+                            :class="{ 'rv-loaded': isVisible, '!min-w-[340px]': index === 5 }"
+                        >
+                            <div class="rv-loading-section rv-left"></div>
+                            <div class="rv-loading-section rv-right"></div>
+                        </div>
                         <keep-alive>
                             <ramp-map
-                                v-if="version === 3"
-                                height="h-[600px]"
+                                v-if="version === 4 && isVisible"
                                 :config="section.key"
-                                :id="`ramp-map3-${index}`"
-                                :version="3"
-                                :key="`ramp-map3-${index}`"
+                                height="h-[600px]"
+                                :id="`ramp-map4-${index}`"
+                                :version="4"
+                                :key="`ramp-map4-${index}`"
                             />
                         </keep-alive>
+                        <div v-if="isVisible">
+                            <keep-alive>
+                                <ramp-map
+                                    v-if="version === 3"
+                                    height="h-[600px]"
+                                    :config="section.key"
+                                    :id="`ramp-map3-${index}`"
+                                    :version="3"
+                                    :key="`ramp-map3-${index}`"
+                                />
+                            </keep-alive>
+                        </div>
                     </div>
                 </div>
                 <div
@@ -58,7 +63,7 @@
                         {{ $t('button.viewDemo') }}
                     </a>
                 </div>
-                <div class="image-container md:ml-[20px]" v-if="index % 2 === 0">
+                <div class="map-container md:ml-[20px]" v-if="index % 2 === 0">
                     <toggle-version @ramp3="openRAMP3" @ramp4="openRAMP4" :version="version" :key="version" />
                     <div class="rv-loading-screen" :class="{ 'rv-loaded': isVisible }">
                         <div class="rv-loading-section rv-left"></div>
@@ -173,7 +178,7 @@ export default class InfoFeatureV extends Vue {
 </script>
 
 <style scoped lang="scss">
-.image-container {
+.map-container {
     @apply flex-1 overflow-hidden justify-center items-center min-h-[682px] w-[340px] sm:min-w-[485px] md:min-w-[485px] lg:min-w-[656px] xl:min-w-[827px] 2xl:min-w-[997px];
     flex: 2;
     img {
