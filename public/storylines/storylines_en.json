@@ -18,9 +18,9 @@
                     "type": "text"
                 },
                 {
-                    "src": "storylines/assets/demo.png",
+                    "src": "storylines/assets/RAMP2.png",
                     "type": "image",
-                    "alt": "A map displaying hundreds of Pulp & Paper facilities across Canada.",
+                    "altText": "A person presenting to their colleagues.",
                     "fullscreen": false
                 }
             ]
@@ -79,23 +79,28 @@
                             "panel": {
                                 "images": [
                                     {
-                                        "src": "storylines/assets/substances/1_AuroraNorth_RelDisp_EN.PNG",
+                                        "src": "storylines/assets/heron.jpg",
                                         "type": "image",
+                                        "altText": "A Great Blue Heron takes flight along the shoreline of the Nicomekl River. Source: Tim Fitzgerald, Ducks Unlimited Canada",
+                                        "caption": "A Great Blue Heron takes flight along the shoreline of the Nicomekl River. Source: Tim Fitzgerald, Ducks Unlimited Canada",
                                         "fullscreen": false
                                     },
                                     {
-                                        "src": "storylines/assets/substances/2_FortHills_RelDisp_EN.PNG",
+                                        "src": "storylines/assets/bittern.jpg",
                                         "type": "image",
+                                        "altText": "The Least Bittern (Ixobrychus exilis) (female pictured here) is a threatened species in Canada. This small heron breeds in the large cattail marshes that are still present in the St. Lawrence Lowlands. Source: Benoît Jobin",
+                                        "caption": "The Least Bittern (Ixobrychus exilis) (female pictured here) is a threatened species in Canada. This small heron breeds in the large cattail marshes that are still present in the St. Lawrence Lowlands. Source: Benoît Jobin",
                                         "fullscreen": false
                                     },
                                     {
-                                        "src": "storylines/assets/substances/3_Horizon_RelDisp_EN.PNG",
+                                        "src": "storylines/assets/plover.jpg",
                                         "type": "image",
+                                        "altText": "The Mountain Plover is a migratory bird and endangered species at risk. Source: Cliff Wallis",
+                                        "caption": "The Mountain Plover is a migratory bird and endangered species at risk. Source: Cliff Wallis",
                                         "fullscreen": false
                                     }
                                 ],
                                 "loop": true,
-                                "caption": "NPRI substances reported for oil sands mining facilities",
                                 "type": "slideshow",
                                 "fullscreen": false
                             }

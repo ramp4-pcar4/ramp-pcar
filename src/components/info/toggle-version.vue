@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-wrap">
+    <div class="flex">
         <button
-            class="bg-teal py-[12px] px-[20px] rounded-lg border-gray-500 border focus:bg-teal-dark hover:bg-teal-dark !no-underline whitespace-nowrap font-bold ml-4 mr-4 mb-4"
+            class="bg-teal py-[12px] px-[20px] rounded-lg border-gray-500 border focus:bg-teal-dark hover:bg-teal-dark !no-underline whitespace-nowrap font-bold mr-4 mb-4"
             :class="{ 'bg-teal-dark': version === 3 }"
             type="button"
             @click="ramp3"

@@ -18,6 +18,9 @@ import VueTippy, { TippyComponent } from 'vue-tippy';
 Vue.use(VueTippy);
 Vue.component('tippy', TippyComponent);
 
+import HighchartsVue from 'highcharts-vue';
+Vue.use(HighchartsVue);
+
 import useToast from 'vue-toastification';
 Vue.use(useToast);
 

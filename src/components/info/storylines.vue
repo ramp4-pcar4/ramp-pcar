@@ -1,5 +1,5 @@
 <template>
-    <div class="storylines bg-white" v-if="loaded && config !== undefined">
+    <div class="storylines bg-white border-2 border-black" v-if="loaded && config !== undefined">
         <header class="gray-200 sticky top-0 h-16 leading-9 w-full z-50 border-b border-gray-500 bg-gray-200">
             <div class="flex w-full sm:px-6 py-3 mx-auto">
                 <storylines-mobile-toc
@@ -26,6 +26,15 @@
 <script lang="ts">
 import { Component, Watch, Vue } from 'vue-property-decorator';
 
+import Highcharts from 'highcharts';
+import dataModule from 'highcharts/modules/data';
+import exporting from 'highcharts/modules/exporting';
+import exportData from 'highcharts/modules/export-data';
+
+dataModule(Highcharts);
+exporting(Highcharts);
+exportData(Highcharts);
+
 @Component({})
 export default class StorylinesV extends Vue {
     config: any = undefined;
@@ -41,7 +50,6 @@ export default class StorylinesV extends Vue {
     }
 
     created(): void {
-        console.log(this);
         this.lang = this.$router.currentRoute.query['lang']
             ? (this.$router.currentRoute.query['lang'] as string)
             : this.lang;

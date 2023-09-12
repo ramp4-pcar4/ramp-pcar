@@ -14,9 +14,7 @@
                 sagittis. Aenean iaculis maximus nulla, eget luctus mauris tincidunt sit amet. In feugiat ex est, ac
                 ultrices arcu pharetra at. Sed justo lacus, lacinia nec ex eget, semper ultrices enim. Nullam blandit
                 convallis lectus, quis dictum lectus maximus eget. Maecenas ex dolor, dictum a faucibus vitae,
-                sollicitudin sit amet augue. Aenean sollicitudin turpis in accumsan condimentum. Quisque lobortis odio a
-                orci pulvinar, dictum consequat erat tincidunt. Mauris sem magna, ornare lobortis laoreet in,
-                sollicitudin ac est.
+                sollicitudin sit amet augue.
             </div>
             <div id="text2">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus imperdiet urna, sit amet iaculis
@@ -26,9 +24,7 @@
                 elit. Duis fringilla varius est a malesuada. Sed aliquet cursus nibh, sed lacinia risus varius ac. Fusce
                 ut lectus eget odio volutpat imperdiet et ut mauris. Suspendisse sit amet consectetur neque. Donec
                 blandit molestie gravida. Praesent semper velit id lobortis tincidunt. Mauris tempus ipsum sit amet ex
-                semper, posuere porta tellus aliquam. Aenean porta nunc in tortor dignissim, vel facilisis lacus
-                egestas. Phasellus suscipit nisl ac est hendrerit egestas. Sed laoreet ultrices viverra. Lorem ipsum
-                dolor sit amet, consectetur adipiscing elit.
+                semper, posuere porta tellus aliquam.
             </div>
             <div id="ramp-map2" is="rv-map" class="h-[725px]" v-pre></div>
         </div>
@@ -38,7 +34,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 import MapScrollguard from './map-scrollguard.vue';
 
@@ -91,9 +87,18 @@ export default class RampMapV extends Vue {
             this.$el.querySelector(updatedID)?.setAttribute('rv-plugins', 'swiper, draw');
         }
 
-        if (this.config === 'sample_mobile') {
-            new RAMP.Map(this.$el.querySelector('#ramp-map2'), `./config/sample_mobile_medium.json`);
-            new RAMP.Map(this.$el.querySelector('#ramp-map3'), `./config/sample_mobile_small.json`);
+        if (this.id === `ramp-map${this.version}-5`) {
+            this.$el.querySelector(updatedID)?.classList.add('w-[340px]');
+        }
+
+        if (this.id === `ramp-demo${this.version}-mobile`) {
+            if (this.version === 3) {
+                new RAMP.Map(this.$el.querySelector('#ramp-map2'), `./config/ramp3/mobile.json`);
+                new RAMP.Map(this.$el.querySelector('#ramp-map3'), `./config/ramp3/mobile.json`);
+            } else if (this.version === 4) {
+                RAMP.createInstance(this.$el.querySelector('#ramp-map2'), require(`/public/config/ramp4/mobile.json`));
+                RAMP.createInstance(this.$el.querySelector('#ramp-map3'), require(`/public/config/ramp4/mobile.json`));
+            }
 
             _window.$('#medium-text').css({
                 display: 'block',

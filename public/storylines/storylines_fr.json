@@ -18,9 +18,9 @@
                     "type": "text"
                 },
                 {
-                    "src": "storylines/assets/demo.png",
+                    "src": "storylines/assets/RAMP2.png",
                     "type": "image",
-                    "alt": "Une carte montrant des centaines d'installations de pâtes et papiers à travers le Canada.",
+                    "altText": "Une personne qui se présente à ses collègues.",
                     "fullscreen": false
                 }
             ]
@@ -31,13 +31,13 @@
                 {
                     "title": "Diapositive Dynamique",
                     "type": "dynamic",
-                    "content": "Vous pouvez cliquer sur l'un des liens suivants pour changer le panneau de droite.\n\n- <a panel='panel-1'>Panneau de Texte</a>\n- <a panel='panel-2'>Panneau D'images</a>\n- <a panel='panel-3'>Panneau des Graphiques</a>\n- <a panel='panel-4'>Panneau de la Carte</a>\n- <a panel='panel-5'>Diaporama D'images</a>\n\n",
+                    "content": "Vous pouvez cliquer sur l’un des liens suivants pour modifier le panneau de droite.\n\n- <a panel='panel-1'>Panneau de Texte</a>\n- <a panel='panel-2'>Panneau D'images</a>\n- <a panel='panel-3'>Panneau des Graphiques</a>\n- <a panel='panel-4'>Panneau de la Carte</a>\n- <a panel='panel-5'>Diaporama D'images</a>\n\n",
                     "children": [
                         {
                             "id": "panel-1",
                             "panel": {
                                 "title": "Contenu Dynamique",
-                                "content": "Contenu textuel résidant dans un panneau dynamique.\n\n||Réalisations|Efforts en Cours et Jalons Prévus|\n|-|-|-|\n|**Rétablissement**|*Population de Dolphin-et-Union*<p><ul><li>Lancement<a href='https://tc.canada.ca/fr/transport-maritime/navigation-conditions-maritimes/gestion-proactive-navires' target='_blank'> du programme Gestion proactive des navires de Transports Canada</a> pour atténuer l'impact des navires et des brise glace sur les passages de glace de mer</li></ul></p>*Population de la toundra*<p><ul><li>Mesures sur le terrain visant les hardes des Territoires du Nord Ouest, du Nunavut et du Yukon par l'intermédiaire de conseils de gestion et des gouvernements autochtones/territoriaux</li><li>Projets menés par des partenaires sur le terrain, y compris les initiatives relatives aux aires protégées et de conservation autochtones qui concernent le caribou de la toundra.</li></ul></p>|*Population de Dolphin-et-Union*<p><ul><li>Poursuite de la planification de la conservation pour exécuter les plans concernant certaines hardes en particulier</li><li>Poursuite de la mobilisation des peuples autochtones en ce qui concerne l'Approche pancanadienne</li></ul></p>*Population de la toundra*<p><ul><li>Protection des passages en eau douce, des couloirs d'accès et des aires de mise bas et d'élevage au Nunavut</li></ul></p>|\n",
+                                "content": "Contenu textuel figurant dans un panneau dynamique.\n\n||Réalisations|Efforts en Cours et Jalons Prévus|\n|-|-|-|\n|**Rétablissement**|*Population de Dolphin-et-Union*<p><ul><li>Lancement<a href='https://tc.canada.ca/fr/transport-maritime/navigation-conditions-maritimes/gestion-proactive-navires' target='_blank'> du programme Gestion proactive des navires de Transports Canada</a> pour atténuer l'impact des navires et des brise glace sur les passages de glace de mer</li></ul></p>*Population de la toundra*<p><ul><li>Mesures sur le terrain visant les hardes des Territoires du Nord Ouest, du Nunavut et du Yukon par l'intermédiaire de conseils de gestion et des gouvernements autochtones/territoriaux</li><li>Projets menés par des partenaires sur le terrain, y compris les initiatives relatives aux aires protégées et de conservation autochtones qui concernent le caribou de la toundra.</li></ul></p>|*Population de Dolphin-et-Union*<p><ul><li>Poursuite de la planification de la conservation pour exécuter les plans concernant certaines hardes en particulier</li><li>Poursuite de la mobilisation des peuples autochtones en ce qui concerne l'Approche pancanadienne</li></ul></p>*Population de la toundra*<p><ul><li>Protection des passages en eau douce, des couloirs d'accès et des aires de mise bas et d'élevage au Nunavut</li></ul></p>|\n",
                                 "type": "text"
                             }
                         },
@@ -79,24 +79,30 @@
                             "panel": {
                                 "images": [
                                     {
-                                        "src": "storylines/assets/substances/AuroraNorth_RelDisp_FR.PNG",
+                                        "src": "storylines/assets/heron.jpg",
                                         "type": "image",
+                                        "altText": "Un Grand Héron prend son envol le long du littoral de la rivière Nicomekl River. Source : Tim Fitzgerald, Canards Illimités Canada",
+                                        "caption": "Un Grand Héron prend son envol le long du littoral de la rivière Nicomekl River. Source : Tim Fitzgerald, Canards Illimités Canada",
                                         "fullscreen": false
                                     },
                                     {
-                                        "src": "storylines/assets/substances/FortHills_RelDisp_FR.PNG",
+                                        "src": "storylines/assets/bittern.jpg",
                                         "type": "image",
+                                        "altText": "Le Petit Blongios (Ixobrychus exilis) (ici une femelle) est une espèce menacée au Canada. Ce petit héron niche dans les grands marais à quenouilles toujours présents dans les Basses-terres du Saint-Laurent. Source : Benoît Jobin",
+                                        "caption": "Le Petit Blongios (Ixobrychus exilis) (ici une femelle) est une espèce menacée au Canada. Ce petit héron niche dans les grands marais à quenouilles toujours présents dans les Basses-terres du Saint-Laurent. Source : Benoît Jobin",
                                         "fullscreen": false
                                     },
                                     {
-                                        "src": "storylines/assets/substances/Horizon_RelDisp_FR.PNG",
+                                        "src": "storylines/assets/plover.jpg",
                                         "type": "image",
+                                        "altText": "Le Pluvier montagnard est une espèce d’oiseau migrateur en péril. Source : Cliff Wallis",
+                                        "caption": "Le Pluvier montagnard est une espèce d’oiseau migrateur en péril. Source : Cliff Wallis",
                                         "fullscreen": false
                                     }
                                 ],
                                 "loop": true,
-                                "caption": "Résidus miniers déclarés à l’INRP par les installations d’exploitation minière à ciel ouvert de sables bitumineux",
-                                "type": "slideshow"
+                                "type": "slideshow",
+                                "fullscreen": false
                             }
                         }
                     ]

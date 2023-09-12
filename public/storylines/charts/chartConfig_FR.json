@@ -6,11 +6,11 @@
         "text": "Émissions de gaz à effet de serre, 2004 à 2019"
     },
     "subtitle": {
-        "text": "Exploitation de Key Lake, Cameco Corporation, Saskatchewan"
+        "text": "Établissement de Key Lake, Cameco Corporation, Saskatchewan"
     },
     "yAxis": {
         "title": {
-            "text": "Kilotonnes d'équivalent dioxyde de carbone"
+            "text": "Kilotonnes d’équivalent en dioxyde de carbone"
         }
     },
     "plotOptions": {
@@ -44,7 +44,7 @@
     },
     "series": [
         {
-            "name": "Émissions des installations (kilotonnes d'équivalent en dioxyde de carbone)",
+            "name": "Émissions de l’installation (kilotonnes d’équivalent en dioxyde de carbone)",
             "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33.96, 23.08, 17.5],
             "type": "column",
             "color": "#0f4c6a"

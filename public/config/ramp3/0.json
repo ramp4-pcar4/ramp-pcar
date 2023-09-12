@@ -15,8 +15,8 @@
         "legend": {
             "allowImport": false,
             "isOpen": {
-                "large": true,
-                "medium": true,
+                "large": false,
+                "medium": false,
                 "small": false
             }
         }

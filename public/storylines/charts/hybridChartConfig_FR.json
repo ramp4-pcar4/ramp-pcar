@@ -3,7 +3,7 @@
         "enabled": false
     },
     "title": {
-        "text": "Rejets totaux d'arsenic entre 2010 et 2020"
+        "text": "Rejets totaux d’arsenic entre 2010 et 2020"
     },
     "xAxis": {
         "categories": [
@@ -33,7 +33,7 @@
         },
         {
             "title": {
-                "text": "Nombre d'installations déclarantes"
+                "text": "Nombre d’installations déclarantes"
             },
             "min": 260,
             "max": 310,

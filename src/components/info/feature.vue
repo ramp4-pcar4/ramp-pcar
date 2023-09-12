@@ -10,9 +10,15 @@
                 :id="`ramp-maps-${index}`"
                 v-else
             >
-                <div class="image-container md:mr-[20px]" v-if="index % 2 !== 0">
+                <div
+                    :class="{
+                        'map-mobile-container md:mr-[20px]': index === 5,
+                        'map-container md:mr-[20px]': index !== 5
+                    }"
+                    v-if="index % 2 !== 0"
+                >
                     <toggle-version @ramp3="openRAMP3" @ramp4="openRAMP4" :version="version" :key="version" />
-                    <div class="rv-loading-screen" :class="{ 'rv-loaded': isVisible }">
+                    <div class="rv-loading-screen" :class="{ 'rv-loaded': isVisible, '!min-w-[340px]': index === 5 }">
                         <div class="rv-loading-section rv-left"></div>
                         <div class="rv-loading-section rv-right"></div>
                     </div>
@@ -58,7 +64,7 @@
                         {{ $t('button.viewDemo') }}
                     </a>
                 </div>
-                <div class="image-container md:ml-[20px]" v-if="index % 2 === 0">
+                <div class="map-container md:ml-[20px]" v-if="index % 2 === 0">
                     <toggle-version @ramp3="openRAMP3" @ramp4="openRAMP4" :version="version" :key="version" />
                     <div class="rv-loading-screen" :class="{ 'rv-loaded': isVisible }">
                         <div class="rv-loading-section rv-left"></div>
@@ -127,11 +133,15 @@ export default class InfoFeatureV extends Vue {
     }
 
     beforeUpdate() {
-        this.previousScrollPosition = window.scrollY;
+        if (this.isVisible) {
+            this.previousScrollPosition = window.scrollY;
+        }
     }
 
     updated() {
-        window.scrollTo(0, this.previousScrollPosition);
+        if (this.isVisible) {
+            window.scrollTo(0, this.previousScrollPosition);
+        }
     }
 
     mounted() {
@@ -139,11 +149,15 @@ export default class InfoFeatureV extends Vue {
             this.show = true;
         }, 1500);
 
+        let timeoutID = 0;
         const callback = (entries: any) => {
             const [entry] = entries;
             if (entry.isIntersecting) {
-                this.isVisible = true;
+                timeoutID = setTimeout(() => {
+                    this.isVisible = true;
+                }, 500);
             } else {
+                clearTimeout(timeoutID);
                 this.isVisible = false;
                 this.version = 4;
             }
@@ -165,12 +179,13 @@ export default class InfoFeatureV extends Vue {
 </script>
 
 <style scoped lang="scss">
-.image-container {
+.map-container {
     @apply flex-1 overflow-hidden justify-center items-center min-h-[682px] w-[340px] sm:min-w-[485px] md:min-w-[485px] lg:min-w-[656px] xl:min-w-[827px] 2xl:min-w-[997px];
     flex: 2;
-    img {
-        @apply max-h-[460px] sm:max-h-[500px] lg:max-h-[420px] xl:max-h-[510px];
-    }
+}
+.map-mobile-container {
+    @apply flex-1 overflow-hidden justify-center items-center min-h-[682px] min-w-[340px] max-w-[340px];
+    flex: 2;
 }
 .text-link {
     @apply underline #{!important};

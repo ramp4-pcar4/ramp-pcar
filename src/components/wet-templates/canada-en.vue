@@ -298,7 +298,6 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class CanadaEnV extends Vue {
     scrollTo(id: string) {
-        console.log(`#${id}`);
         const el = document.querySelector(`#${id}`) as HTMLElement;
 
         window.scrollTo(0, el.offsetTop);

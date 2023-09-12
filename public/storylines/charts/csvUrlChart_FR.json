@@ -3,11 +3,11 @@
         "type": "spline"
     },
     "title": {
-        "text": "Données en direct (CSV)"
+        "text": "Données réelles (CSV)"
     },
 
     "subtitle": {
-        "text": "Saisie de données à partir d'un fichier CSV distant"
+        "text": "Saisie de données à partir d’un fichier CSV distant"
     },
 
     "data": {
