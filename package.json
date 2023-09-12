@@ -1,7 +1,7 @@
 {
-  "name": "ramp-website",
+  "name": "ramp-pcar",
   "version": "0.1.0",
-  "homepage": "https://ramp4-pcar4.github.io/ramp-website",
+  "homepage": "https://ramp4-pcar4.github.io/ramp-pcar",
   "private": true,
   "scripts": {
     "serve": "cross-env NODE_ENV=development TAILWIND_MODE=watch vue-cli-service serve --host localhost",
