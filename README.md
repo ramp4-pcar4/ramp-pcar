@@ -1,4 +1,6 @@
-# ramp-website
+# ramp-pcar
+Was previously called ramp-website but had to be renamed to make the endpoint for the website bilingual. 
+If you're looking for the RAMP4 repo, its [here](https://github.com/ramp4-pcar4/ramp4-pcar4).
 
 ## Project setup
 ```

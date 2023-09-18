@@ -14,25 +14,29 @@
             ></description-block>
         </div>
 
-        <component :is="`canada-${$i18n.locale}`">
+        <div class="!container mx-auto my-[40px]">
             <toggle-version @ramp3="openRAMP3" @ramp4="openRAMP4" :version="version" />
-            <keep-alive>
-                <ramp-map
-                    v-if="version === 3"
-                    :config="config"
-                    :version="3"
-                    :id="`ramp-map3-${config}`"
-                    :key="`ramp-map3-${config}`"
-                />
-                <ramp-map
-                    v-if="version === 4"
-                    :config="config"
-                    :version="4"
-                    :id="`ramp-map4-${config}`"
-                    :key="`ramp-map4-${config}`"
-                />
-            </keep-alive>
-        </component>
+            <div class="border-2 border-black">
+                <component :is="`canada-${$i18n.locale}`">
+                    <keep-alive>
+                        <ramp-map
+                            v-if="version === 3"
+                            :config="config"
+                            :version="3"
+                            :id="`ramp-map3-${config}`"
+                            :key="`ramp-map3-${config}`"
+                        />
+                        <ramp-map
+                            v-if="version === 4"
+                            :config="config"
+                            :version="4"
+                            :id="`ramp-map4-${config}`"
+                            :key="`ramp-map4-${config}`"
+                        />
+                    </keep-alive>
+                </component>
+            </div>
+        </div>
     </div>
 </template>
 

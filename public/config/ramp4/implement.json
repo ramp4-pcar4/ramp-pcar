@@ -83,7 +83,7 @@
                 {
                     "name": "MSC150",
                     "id": "msc150",
-                    "url": "https://maps-cartes.ec.gc.ca/arcgis/rest/services/MSC150/MapServer",
+                    "url": "https://section917.canadacentral.cloudapp.azure.com/arcgis/rest/services/MSC150/MapServer",
                     "layerType": "esri-map-image",
                     "sublayers": [
                         {

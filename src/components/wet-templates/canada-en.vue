@@ -23,7 +23,7 @@
                 </li>
             </ul>
             <header>
-                <div id="wb-bnr" class="container">
+                <div id="wb-bnr" class="container mx-auto">
                     <div class="row">
                         <div class="brand col-xs-5 col-md-4" property="publisher" typeof="GovernmentOrganization">
                             <a href="https://www.canada.ca/en.html" property="url"
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <nav class="gcweb-menu" typeof="SiteNavigationElement">
-                    <div class="container">
+                    <div class="container mx-auto">
                         <h2 class="wb-inv">Menu</h2>
                         <button type="button" aria-haspopup="true" aria-expanded="false">
                             <span class="wb-inv">Main </span>Menu
@@ -172,7 +172,7 @@
                 </nav>
                 <nav id="wb-bc" property="breadcrumb">
                     <h2>You are here:</h2>
-                    <div class="container">
+                    <div class="container mx-auto">
                         <div class="row">
                             <ol class="breadcrumb">
                                 <li>
@@ -200,7 +200,7 @@
             <!-- Write closure fall-back static file -->
             <footer id="wb-info">
                 <div class="landscape">
-                    <nav class="container wb-navcurr">
+                    <nav class="container mx-auto wb-navcurr">
                         <h2 class="wb-inv">About government</h2>
                         <ul class="list-unstyled colcount-sm-2 colcount-md-3">
                             <li>
@@ -240,7 +240,7 @@
                     </nav>
                 </div>
                 <div class="brand">
-                    <div class="container">
+                    <div class="container mx-auto">
                         <div class="row">
                             <nav class="col-md-10 ftr-urlt-lnk">
                                 <h2 class="wb-inv">About this site</h2>

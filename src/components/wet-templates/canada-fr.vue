@@ -22,7 +22,7 @@
                 </li>
             </ul>
             <header>
-                <div id="wb-bnr" class="container">
+                <div id="wb-bnr" class="container mx-auto">
                     <div class="row">
                         <div class="brand col-xs-5 col-md-4">
                             <a href="https://www.canada.ca/fr.html"
@@ -85,7 +85,7 @@
                     </div>
                 </div>
                 <nav class="gcweb-menu" typeof="SiteNavigationElement">
-                    <div class="container">
+                    <div class="container mx-auto">
                         <h2 class="wb-inv">Menu</h2>
                         <button type="button" aria-haspopup="true" aria-expanded="false">
                             Menu<span class="wb-inv"> principal</span>
@@ -166,7 +166,7 @@
                 </nav>
                 <nav id="wb-bc" property="breadcrumb">
                     <h2>Vous êtes ici :</h2>
-                    <div class="container">
+                    <div class="container mx-auto">
                         <div class="row">
                             <ol class="breadcrumb">
                                 <li>
@@ -193,7 +193,7 @@
         <div id="def-footer">
             <footer id="wb-info">
                 <div class="landscape">
-                    <nav class="container wb-navcurr">
+                    <nav class="container mx-auto wb-navcurr">
                         <h2 class="wb-inv">Au sujet du gouvernement</h2>
                         <ul class="list-unstyled colcount-sm-2 colcount-md-3">
                             <li>
@@ -238,7 +238,7 @@
                     </nav>
                 </div>
                 <div class="brand">
-                    <div class="container">
+                    <div class="container mx-auto">
                         <div class="row">
                             <nav class="col-md-10 ftr-urlt-lnk">
                                 <h2 class="wb-inv">À propos du site</h2>
