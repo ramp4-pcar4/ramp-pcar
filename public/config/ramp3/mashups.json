@@ -96,7 +96,7 @@
                 "id": "firstnationslocations",
                 "name": "First Nations Locations",
                 "layerType": "esriFeature",
-                "url": "https://data.aadnc-aandc.gc.ca/geomatics/rest/services/Donnees_Ouvertes-Open_Data/Premiere_Nation_First_Nation/MapServer/0"
+                "url": "https://data.sac-isc.gc.ca/geomatics/rest/services/Donnees_Ouvertes-Open_Data/Premiere_Nation_First_Nation/MapServer/0"
             },
             {
                 "id": "mercuryinwater",
