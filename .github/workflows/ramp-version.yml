@@ -1,0 +1,71 @@
+name: Update RAMP Version and Create PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      ramp_version:
+        description: "RAMP version to use"
+        required: true
+
+jobs:
+  update-and-pr:
+    name: Update RAMP Version and Create PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create a new branch
+        run: |
+          git checkout -b update-ramp-${{ github.event.inputs.ramp_version }}
+
+      - name: Update RAMP version in package.json
+        run: |
+          echo "Updating RAMP version in package.json..."
+          jq ".dependencies[\"ramp-pcar\"] = \"${{ github.event.inputs.ramp_version }}\"" package.json > package.tmp.json
+          mv package.tmp.json package.json
+          npm install
+
+      - name: Modify main.ts based on RAMP version
+        run: |
+          echo "Checking if main.ts needs modification..."
+          VERSION="${{ github.event.inputs.ramp_version }}"
+          FILE="src/main.ts"
+
+          if [ -f "$FILE" ]; then
+            # Check if the version is <= 4.8.0
+            if [ "$(printf '%s\n' "$VERSION" "4.8.0" | sort -V | head -n1)" = "$VERSION" ]; then
+              echo "RAMP version is 4.8.0 or lower. Updating main.ts..."
+              sed -i 's|import '\''ramp-pcar/dist/ramp.css'\'';|import '\''ramp-pcar/dist/lib/ramp.css'\'';|g' $FILE
+            # Check if the version is >= 4.9.0
+            elif [ "$(printf '%s\n' "$VERSION" "4.9.0" | sort -V | head -n1)" = "4.9.0" ]; then
+              echo "RAMP version is 4.9.0 or higher. Updating main.ts..."
+              sed -i 's|import '\''ramp-pcar/dist/lib/ramp.css'\'';|import '\''ramp-pcar/dist/ramp.css'\'';|g' $FILE
+            else
+              echo "No changes needed for main.ts."
+            fi
+          else
+            echo "main.ts not found. Skipping modification."
+          fi
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add package.json package-lock.json yarn.lock src/main.ts
+          git commit -m "Update RAMP version to ${{ github.event.inputs.ramp_version }}"
+          git push origin update-ramp-${{ github.event.inputs.ramp_version }}
+
+      - name: Create Pull Request using github-script
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const pr = await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Update RAMP version to ${{ github.event.inputs.ramp_version }}`,
+              head: `update-ramp-${{ github.event.inputs.ramp_version }}`,
+              base: 'master',
+              body: `This pull request updates the RAMP4 version to ${{ github.event.inputs.ramp_version }}.`
+            });

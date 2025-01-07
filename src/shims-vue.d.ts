@@ -3,6 +3,7 @@ declare module '*.vue' {
     export default Vue;
 }
 
+declare module 'ramp-pcar';
 declare module 'ramp-storylines';
 declare module 'vue-fullscreen';
 declare module 'vue-tippy';
