@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkramp_website"]=self["webpackChunkramp_website"]||[]).push([[7228],{27228:function(s,t,e){e.r(t),e.d(t,{deleteForwardEdits:function(){return r}});var i=e(44444);async function r(s,t,e,r){if(!t)throw new i.s("post:missing-guid","guid for version is missing");const n=(0,i.bq)(s),o=e.toJSON(),a=(0,i.br)(n.query,{query:(0,i.bs)({...o,f:"json"}),...r,method:"post"});t.startsWith("{")&&(t=t.slice(1,-1));const u=`${n.path}/versions/${t}/deleteForwardEdits`,{data:d}=await(0,i.U)(u,a);return d}}}]);
+//# sourceMappingURL=7228.463ba476.js.map

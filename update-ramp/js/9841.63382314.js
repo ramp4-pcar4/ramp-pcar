@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkramp_website"]=self["webpackChunkramp_website"]||[]).push([[9841],{9841:function(e,t,a){a.r(t),a.d(t,{default:function(){return r}});var n=a(30550),i=a(44444);class r extends i.F{get config(){return this.$iApi.fixture.get("export").config?.map}async make(e){const t=await this.$iApi.geo.map.takeScreenshot({quality:1,format:"png"}),a=new Image;a.src=t.dataUrl;const i=await new Promise((e=>a.onload=()=>e(a)));return new n.a.fabric.Image(i,e)}}}}]);
+//# sourceMappingURL=9841.63382314.js.map
