@@ -35,7 +35,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-
+import { createInstance } from 'ramp-pcar';
 import MapScrollguard from './map-scrollguard.vue';
 
 @Component
@@ -60,7 +60,7 @@ export default class RampMapV extends Vue {
             this.$el.querySelector(updatedID)?.classList.remove('h-[725px]');
         }
 
-        const RAMP = this.version === 4 ? (window as any).RAMP4 : (window as any).RAMP;
+        const RAMP = (window as any).RAMP;
 
         const _window = window as any;
 
@@ -71,7 +71,7 @@ export default class RampMapV extends Vue {
         }
 
         if (this.version === 4) {
-            RAMP.createInstance(this.$el.querySelector(updatedID), require(`/public/config/ramp4/${this.config}.json`));
+            createInstance(this.$el.querySelector(updatedID), require(`/public/config/ramp4/${this.config}.json`));
         } else if (this.version === 3) {
             new RAMP.Map(this.$el.querySelector(updatedID), `./config/ramp3/${this.config ? this.config : '0'}.json`);
         }
@@ -96,8 +96,8 @@ export default class RampMapV extends Vue {
                 new RAMP.Map(this.$el.querySelector('#ramp-map2'), `./config/ramp3/mobile.json`);
                 new RAMP.Map(this.$el.querySelector('#ramp-map3'), `./config/ramp3/mobile.json`);
             } else if (this.version === 4) {
-                RAMP.createInstance(this.$el.querySelector('#ramp-map2'), require(`/public/config/ramp4/mobile.json`));
-                RAMP.createInstance(this.$el.querySelector('#ramp-map3'), require(`/public/config/ramp4/mobile.json`));
+                createInstance(this.$el.querySelector('#ramp-map2'), require(`/public/config/ramp4/mobile.json`));
+                createInstance(this.$el.querySelector('#ramp-map3'), require(`/public/config/ramp4/mobile.json`));
             }
 
             _window.$('#medium-text').css({
