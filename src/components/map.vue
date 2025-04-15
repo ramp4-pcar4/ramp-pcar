@@ -49,6 +49,20 @@ export default class RampMapV extends Vue {
     shadowValue = false;
 
     mounted() {
+        this.initMap();
+    }
+
+    async loadRAMP() {
+        const RAMP = this.version === 4 ? 'RAMP4' : 'RAMP';
+
+        while (!(window as any)[RAMP]) {
+            await new Promise((resolve) => setTimeout(resolve, 50));
+        }
+
+        return (window as any)[RAMP];
+    }
+
+    async initMap() {
         this.shadowValue = this.shadow ?? false;
 
         this.$el.querySelector('#ramp-map')?.setAttribute('id', this.id ?? 'ramp-map');
@@ -60,15 +74,8 @@ export default class RampMapV extends Vue {
             this.$el.querySelector(updatedID)?.classList.remove('h-[725px]');
         }
 
-        const RAMP = this.version === 4 ? (window as any).RAMP4 : (window as any).RAMP;
-
+        const RAMP = await this.loadRAMP();
         const _window = window as any;
-
-        // if RAMP API is not ready yet, loop-wait until it's loaded
-        if (!RAMP) {
-            window.setInterval(() => this.mounted(), 500);
-            return;
-        }
 
         if (this.version === 4) {
             RAMP.createInstance(this.$el.querySelector(updatedID), require(`/public/config/ramp4/${this.config}.json`));
@@ -145,7 +152,6 @@ export default class RampMapV extends Vue {
             });
         }
 
-        window.scrollTo(0, 0);
         if (this.version === 3 && this.$route.name === 'Home') {
             RAMP.mapAdded.subscribe(async (mapi: any) => {
                 const scrollguardComponent = new Vue({
