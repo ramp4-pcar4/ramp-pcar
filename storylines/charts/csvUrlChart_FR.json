@@ -1,0 +1,17 @@
+{
+    "chart": {
+        "type": "spline"
+    },
+    "title": {
+        "text": "Données réelles (CSV)"
+    },
+
+    "subtitle": {
+        "text": "Saisie de données à partir d’un fichier CSV distant"
+    },
+
+    "data": {
+        "csvURL": "https://demo-live-data.highcharts.com/time-data.csv",
+        "enablePolling": true
+    }
+}
