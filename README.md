@@ -22,9 +22,10 @@ yarn build
 yarn lint
 ```
 
-## Updating RAMP versions
-The marketing site now contains instances of both RAMP2 and RAMP4. Both versions use a global variable called ```RAMP``` and will cause a conflict. 
-When updating ramp.js to the latest version, you will need to update the variable name to ```RAMP4``` at the top of the script.
+## Site scope
+The site has been reduced to the landing page only (header + RAMP map hero). The feature sections, sample pages and
+contact form have been removed; "Get in Touch" / "Request a Demo" are `mailto:` links (see `src/configs/links.ts`).
+The landing map is a RAMP2 instance loaded from `public/js/rv-main.js` with `public/config/ramp3/0.json`.
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

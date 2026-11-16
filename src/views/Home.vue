@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ramp-map :shadow="true" :key="$i18n.locale" :version="3" :id="`ramp-home`" class="home">
+        <ramp-map :shadow="true" :key="$i18n.locale" :id="`ramp-home`" class="home">
             <div class="flex justify-center w-full container mx-auto absolute top-[214px] pointer-events-none">
                 <div class="flex justify-end w-full md:w-2/3">
                     <div
@@ -12,33 +12,31 @@
                             {{ $t('map.description') }}
                         </p>
                         <a
+                            :href="mailto"
                             class="border-white rounded-lg p-[12px] border-2 font-bold focus:bg-gray-600 hover:bg-gray-600 !no-underline text-xl"
                         >
-                            <router-link :to="{ hash: '#footer' }"> {{ $t('button.requestDemo') }}</router-link>
+                            {{ $t('button.requestDemo') }}
                         </a>
                     </div>
                 </div>
             </div></ramp-map
         >
-        <info-shell></info-shell>
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import RampMapV from '@/components/map.vue';
-import InfoShellV from '@/components/info/shell.vue';
-import { links } from '@/configs/links';
+import { CONTACT_MAILTO } from '@/configs/links';
 
 export default {
     name: 'Home',
     components: {
-        'ramp-map': RampMapV,
-        'info-shell': InfoShellV
+        'ramp-map': RampMapV
     },
     data: function () {
         return {
-            links: links
+            mailto: CONTACT_MAILTO
         };
     }
 };

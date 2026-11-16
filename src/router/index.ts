@@ -1,9 +1,6 @@
 import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '@/views/Home.vue';
-import SamplePage from '@/views/SamplePage.vue';
-import ExternalSamplePage from '@/views/ExternalSamplePage.vue';
-import RampFooterV from '@/components/footer.vue';
 
 Vue.use(VueRouter);
 
@@ -14,29 +11,14 @@ const routes: Array<RouteConfig> = [
         component: Home
     },
     {
-        path: '/samples/:config',
-        name: 'Samples',
-        component: SamplePage,
-        props: true
-    },
-    {
-        path: '/external_samples/:config',
-        name: 'External Samples',
-        component: ExternalSamplePage,
-        props: true
+        // old sample/feature links (e.g. #/samples/datatypes) land back on the home page
+        path: '*',
+        redirect: '/'
     }
 ];
 
 const router = new VueRouter({
-    routes,
-    scrollBehavior(to, from, savedPosition) {
-        if (to.hash) {
-            return {
-                selector: to.hash,
-                behavior: 'smooth'
-            };
-        }
-    }
+    routes
 });
 
 export default router;

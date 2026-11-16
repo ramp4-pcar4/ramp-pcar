@@ -2,7 +2,6 @@
     <div id="app" class="bg-white">
         <ramp-header></ramp-header>
         <router-view></router-view>
-        <ramp-footer></ramp-footer>
     </div>
 </template>
 
@@ -10,16 +9,10 @@
 import { Component, Vue } from 'vue-property-decorator';
 
 import RampHeaderV from '@/components/header.vue';
-import RampMapV from '@/components/map.vue';
-import InfoShellV from '@/components/info/shell.vue';
-import RampFooterV from '@/components/footer.vue';
 
 @Component({
     components: {
-        'ramp-header': RampHeaderV,
-        'ramp-map': RampMapV,
-        'info-shell': InfoShellV,
-        'ramp-footer': RampFooterV
+        'ramp-header': RampHeaderV
     }
 })
 export default class App extends Vue {

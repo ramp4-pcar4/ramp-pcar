@@ -19,15 +19,6 @@
             </a>
             <div class="lg:ml-auto flex mb-[8px] !text-[16px]">
                 <a
-                    class="button cursor-pointer"
-                    @click="scrollToFeatures()"
-                    @keypress.enter="scrollToFeatures()"
-                    tabindex="0"
-                    v-if="$router.currentRoute.name === 'Home'"
-                >
-                    {{ $t('header.features') }}
-                </a>
-                <a
                     class="button"
                     href="https://github.com/ramp4-pcar4"
                     style="margin-right: 15px"
@@ -37,8 +28,8 @@
                 >
                     <font-awesome-icon icon="fa-brands fa-github" style="color: #000000" class="w-12 h-12" />
                 </a>
-                <a class="button font-bold border-4 border-black">
-                    <router-link :to="{ hash: '#footer' }"> {{ $t('header.getInTouch') }}</router-link>
+                <a class="button font-bold border-4 border-black" :href="mailto">
+                    {{ $t('header.getInTouch') }}
                 </a>
             </div>
         </div>
@@ -48,11 +39,11 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
-import { links } from '@/configs/links';
+import { CONTACT_MAILTO } from '@/configs/links';
 
 @Component
 export default class RampHeaderV extends Vue {
-    links = links;
+    mailto = CONTACT_MAILTO;
 
     changeLang() {
         this.$i18n.locale = this.$i18n.locale === 'en' ? 'fr' : 'en';
@@ -60,12 +51,6 @@ export default class RampHeaderV extends Vue {
         this.$router.replace({ query: { lang: this.$i18n.locale } });
         document.title = this.$i18n.t('page.title') as string;
         document.documentElement.lang = this.$i18n.locale;
-    }
-
-    scrollToFeatures() {
-        const el = document.querySelector('div#features') as HTMLElement;
-
-        window.scrollTo(0, el.offsetTop);
     }
 }
 </script>
