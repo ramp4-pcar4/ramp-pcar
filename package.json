@@ -15,21 +15,13 @@
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^2.0.10",
-    "axios": "^1.4.0",
     "core-js": "^3.6.5",
-    "glider-js": "^1.7.7",
-    "highcharts": "^9.3.2",
-    "highcharts-vue": "^1.4.0",
     "ramp-pcar": "4.11.0",
-    "ramp-storylines": "^0.2.6",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
-    "vue-fullscreen": "^2.6.1",
     "vue-i18n": "^8.24.5",
     "vue-property-decorator": "^9.1.2",
-    "vue-router": "^3.6.5",
-    "vue-tippy": "^4.10.0",
-    "vue-toastification": "^1.7.14"
+    "vue-router": "^3.6.5"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.1",

@@ -4,7 +4,3 @@ declare module '*.vue' {
 }
 
 declare module 'ramp-pcar';
-declare module 'ramp-storylines';
-declare module 'vue-fullscreen';
-declare module 'vue-tippy';
-declare module 'vue-toastification';
