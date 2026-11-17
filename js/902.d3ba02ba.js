@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkramp_website"]=self["webpackChunkramp_website"]||[]).push([[902],{48521:function(e,o,r){r.r(o),r.d(o,{default:function(){return c}});var t,n=r(98503);let s=t=class extends n.v{constructor(e){super(e),this.color=new n.aC([0,0,0,1])}clone(){return new t((0,n.f)({color:this.color}))}};(0,n.k)([(0,n.o)({type:n.aC,json:{write:!0}})],s.prototype,"color",void 0),s=t=(0,n.k)([(0,n.A)("esri.webmap.background.ColorBackground")],s);const c=s}}]);
+//# sourceMappingURL=902.d3ba02ba.js.map
